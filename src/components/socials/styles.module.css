@@ -1,0 +1,18 @@
+.icon {
+  width: 3.5rem;
+  height: 100%;
+  margin-top: 3rem;
+}
+
+.icon:hover {
+  cursor: pointer;
+  transform: scale(1.25);
+  transition: all 0.2s ease-in-out;
+}
+
+.socials_wrapper {
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+  align-items: center;
+}
