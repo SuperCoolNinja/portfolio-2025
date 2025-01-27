@@ -4,9 +4,11 @@ import { ProfilPicture } from "../profil_picture";
 import { FullName } from "../fullname";
 import { ListSocialsIcons } from "../socials";
 import "../../i18n/config";
+import { Separator } from "../separator";
+import { Actions } from "../actions";
 
 export const App = () => {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
 
   // The language will depend on the user navigator language used.
   useEffect(() => {
@@ -19,7 +21,8 @@ export const App = () => {
       <ProfilPicture />
       <FullName />
       <ListSocialsIcons />
-      <p>{t("hello")}</p>
+      <Separator />
+      <Actions />
     </div>
   );
 };

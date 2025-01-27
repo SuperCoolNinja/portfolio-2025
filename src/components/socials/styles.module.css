@@ -1,7 +1,7 @@
 .icon {
-  width: 3.5rem;
+  width: 2.8rem;
   height: 100%;
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
 .icon:hover {
@@ -12,7 +12,7 @@
 
 .socials_wrapper {
   display: flex;
-  gap: 4rem;
   justify-content: center;
   align-items: center;
+  gap: 4rem;
 }

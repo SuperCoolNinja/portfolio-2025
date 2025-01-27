@@ -1,3 +1,5 @@
 {
-  "hello": "Hello world"
+  "btn_about": "About me",
+  "btn_projects": "Projects",
+  "btn_skills": "Skils"
 }

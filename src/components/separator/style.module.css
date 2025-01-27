@@ -1,0 +1,7 @@
+.separator {
+  width: 40rem;
+  height: 0.25rem;
+  border: 0.25rem solid #ff7700;
+  border-radius: 1rem;
+  margin: 3rem auto;
+}

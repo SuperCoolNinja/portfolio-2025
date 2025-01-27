@@ -1,3 +1,5 @@
 {
-  "hello": "Bonjour Monde !"
+  "btn_about": "À propos de moi",
+  "btn_projects": "Projets",
+  "btn_skills": "Compétences"
 }
