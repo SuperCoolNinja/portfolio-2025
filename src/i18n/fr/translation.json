@@ -1,5 +1,9 @@
 {
   "btn_about": "À propos de moi",
   "btn_projects": "Projets",
-  "btn_skills": "Compétences"
+  "btn_skills": "Compétences",
+  "about_me_one": "Hey ! Je suis Samir, aussi connu sous le nom de SuperCoolNinja.",
+  "about_me_two": "Développeur full-stack français, je m'intéresse au développement de jeux et aux web app.",
+  "about_me_three": "Je suis passionné par la création d'expériences intuitives, modernes et esthétiques.",
+  "about_me_four": "J'ai de l'expérience avec JavaScript, TypeScript, C#, NodeJS, MongoDB, SQL, ASP.NET et Unity."
 }

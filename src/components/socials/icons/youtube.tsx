@@ -3,7 +3,7 @@ import styles from "../styles.module.css";
 
 export function YoutubeIcon(props: SVGProps<SVGSVGElement>) {
   return (
-    <div title="Youtube channel">
+    <li title="Youtube channel">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         className={styles.icon}
@@ -20,6 +20,6 @@ export function YoutubeIcon(props: SVGProps<SVGSVGElement>) {
           d="m102.421 128.06l66.328-38.418l-66.328-38.418z"
         ></path>
       </svg>
-    </div>
+    </li>
   );
 }

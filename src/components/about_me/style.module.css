@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  margin: 5rem auto;
+  padding: 2rem;
+  border-radius: 1rem;
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  width: 83rem;
+  line-height: 2.3rem;
+}
+
+.content {
+  color: #3f3f3f;
+  font-weight: 500;
+}
