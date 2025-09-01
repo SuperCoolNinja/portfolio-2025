@@ -1,9 +1,9 @@
 import { useState } from "react";
 import styles from "./home.module.css";
-import { About } from "../components/AboutMe/About";
 import Project from "../components/Projects/Project";
 import Skills from "../components/Skills/Skills";
 import Menu from "../components/Menu/Menu";
+import About from "../components/AboutMe/About";
 
 const Home: React.FunctionComponent = () => {
   const items: string[] = ["About me", "Projects", "Skills"];

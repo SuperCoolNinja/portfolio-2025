@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.item {
+  transition: transform 0.3s;
+}
+
+.item:hover {
+  transform: scale(1.4);
+}
