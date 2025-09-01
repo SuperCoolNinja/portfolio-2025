@@ -98,4 +98,6 @@
   font-size: 1.2rem;
   font-weight: normal;
   color: rgba(255, 255, 255, 255);
+  border: 1px solid #ffffff14;
+  border-color: color-mix(in oklab, #fff 10%, transparent);
 }
