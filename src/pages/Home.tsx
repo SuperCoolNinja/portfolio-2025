@@ -1,23 +1,20 @@
 import { useState } from "react";
-import styles from "./home.module.css";
 import Project from "../components/Projects/Project";
 import Skills from "../components/Skills/Skills";
 import Menu from "../components/Menu/Menu";
 import About from "../components/AboutMe/About";
 
 const Home: React.FunctionComponent = () => {
-  const items: string[] = ["About me", "Projects", "Skills"];
+  const items: string[] = ["About", "Projects", "Skills"];
   const [selected, setSelected] = useState<string>(items[0]);
 
   return (
-    <div className={styles.container}>
+    <div>
       <Menu items={items} selected={selected} onSelect={setSelected} />
 
-      <div className={styles.contents}>
-        {selected === "About me" && <About />}
-        {selected === "Projects" && <Project />}
-        {selected === "Skills" && <Skills />}
-      </div>
+      {selected === "About" && <About />}
+      {selected === "Projects" && <Project />}
+      {selected === "Skills" && <Skills />}
     </div>
   );
 };
