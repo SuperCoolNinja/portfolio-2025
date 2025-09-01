@@ -23,8 +23,9 @@
 }
 
 .title {
-  font-size: clamp(2.5rem, 5vw, 3rem);
-  margin: 3rem auto;
+  font-size: clamp(1.8rem, 2vw, 2rem);
+  color: white;
+  font-weight: 400;
 }
 
 .look_job_container {
@@ -78,4 +79,23 @@
   margin-bottom: 15rem;
   background-color: color-mix(in oklab, #fff 5%, transparent);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: normal;
+  font-size: 1.5rem;
+}
+
+.stacks {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.stacks_item {
+  margin-top: 1rem;
+  background-color: color-mix(in oklab, #fff 5%, transparent);
+  border-radius: 3rem;
+  padding: 0.8rem;
+  font-size: 1.2rem;
+  font-weight: normal;
+  color: rgba(255, 255, 255, 255);
 }

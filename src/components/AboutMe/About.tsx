@@ -5,20 +5,34 @@ import profileFull from "../../assets/profil-full.jpg";
 import LazyImage from "../LazyImage/LazyImage";
 import Socials from "../Socials/Socials";
 
+const Stacks: React.FunctionComponent = () => {
+  return (
+    <ul className={styles.stacks}>
+      <li className={styles.stacks_item}>Typescript</li>
+      <li className={styles.stacks_item}>Nodejs</li>
+      <li className={styles.stacks_item}>ReactJS</li>
+      <li className={styles.stacks_item}>MongoDB</li>
+    </ul>
+  );
+};
+
 const CardAboutMe: React.FunctionComponent = () => {
   return (
     <div className={styles.wrapper_card}>
-      <h3 className={styles.title}>About Me</h3>
       <div className={styles.card}>
+        <p className={styles.title}>About Me</p>
+        <br />
         <p>
           Ambitious fullstack developer from France, mastering ReactJS, NodeJS,
           and MongoDB, creating impactful solutions!
         </p>
-        <br />
         <p>
           Interested in video game creation and having an eye for modern,
           ergonomic UX/UI.
         </p>
+        <br />
+        <p>My Main Stacks:</p>
+        <Stacks />
       </div>
     </div>
   );
