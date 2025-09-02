@@ -85,7 +85,7 @@
   font-size: 1.5rem;
 }
 
-.stacks_container {
+.items_container {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -95,13 +95,13 @@
   margin: 2rem 0;
 }
 
-.stacks {
+.items {
   display: flex;
   flex-direction: row;
   gap: 1rem;
 }
 
-.stacks_item {
+.item {
   background-color: color-mix(in oklab, #fff 5%, transparent);
   border-radius: 3rem;
   padding: 0.8rem;
@@ -109,4 +109,8 @@
   font-weight: normal;
   border: 1px solid #ffffff14;
   border-color: color-mix(in oklab, #fff 10%, transparent);
+}
+
+.items_container:last-child {
+  margin-bottom: 15rem;
 }

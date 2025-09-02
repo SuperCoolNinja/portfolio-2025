@@ -5,14 +5,31 @@ import profileFull from "../../assets/profil-full.jpg";
 import LazyImage from "../LazyImage/LazyImage";
 import Socials from "../Socials/Socials";
 
-const Stacks: React.FunctionComponent = () => {
+type list_items_data = {
+  subtitle: string;
+  items: string[];
+};
+
+// <li className={styles.stacks_item}>Typescript</li>
+//       <li className={styles.stacks_item}>Nodejs</li>
+//       <li className={styles.stacks_item}>ReactJS</li>
+//       <li className={styles.stacks_item}>MongoDB</li>
+
+const Items: React.FunctionComponent<list_items_data> = ({
+  subtitle,
+  items,
+}) => {
   return (
-    <ul className={styles.stacks}>
-      <li className={styles.stacks_item}>Typescript</li>
-      <li className={styles.stacks_item}>Nodejs</li>
-      <li className={styles.stacks_item}>ReactJS</li>
-      <li className={styles.stacks_item}>MongoDB</li>
-    </ul>
+    <div className={styles.items_container}>
+      <p className={styles.subtitle}>{subtitle}</p>
+      <ul className={styles.items}>
+        {items.map((v, i) => (
+          <li className={styles.item} key={i}>
+            {v}
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 };
 
@@ -34,6 +51,15 @@ const CardAboutMe: React.FunctionComponent = () => {
   );
 };
 
+const Bio: React.FunctionComponent = () => {
+  return (
+    <>
+      <h2 className={styles.name}>Samir Baatour</h2>
+      <p className={styles.job}>Fullstack Developer</p>
+    </>
+  );
+};
+
 const About: React.FunctionComponent = () => {
   const looking_for_job = true;
 
@@ -52,19 +78,18 @@ const About: React.FunctionComponent = () => {
         alt="Ma photo de profil"
         width={200}
       />
-
-      <h2 className={styles.name}>Samir Baatour</h2>
-      <p className={styles.job}>Fullstack Developer</p>
-
+      <Bio />
       {OpenToWork}
       <Socials />
-
       <CardAboutMe />
-
-      <div className={styles.stacks_container}>
-        <p className={styles.subtitle}>My Main Stacks</p>
-        <Stacks />
-      </div>
+      <Items
+        subtitle="My Main Stacks"
+        items={["Typescript", "NodeJS", "ReactJS", "MongoDB"]}
+      />
+      <Items
+        subtitle="What I do ?"
+        items={["Frontend ", "Backend", "Game Development"]}
+      />
     </div>
   );
 };
