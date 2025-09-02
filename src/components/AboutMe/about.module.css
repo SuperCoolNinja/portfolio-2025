@@ -16,50 +16,52 @@
 
 .name {
   margin: 1rem 0;
+  font-size: 3rem;
 }
 
 .job {
   color: rgba(255, 255, 255, 0.6);
+  font-size: 2rem;
+  font-weight: normal;
+  margin-bottom: 1rem;
 }
 
 .title {
   font-size: clamp(1.8rem, 2vw, 2rem);
   color: white;
-  font-weight: 400;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: clamp(1.8rem, 2vw, 2rem);
+  color: white;
+  font-weight: 600;
 }
 
 .look_job_container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  margin: 1rem auto;
   border: 1px solid #ffffff14;
   border-color: color-mix(in oklab, #fff 10%, transparent);
-  border-radius: 1rem;
-  padding: 1rem;
+  border-radius: 1.2rem;
+  padding: 1rem 2rem;
+  background-color: color-mix(in oklab, #fff 5%, transparent);
+  margin: 1rem;
 }
 
-.circle {
-  width: 1rem;
-  height: 1rem;
-  border-radius: 100%;
+.look_job_title {
+  font-size: 2rem;
+  font-weight: normal;
   animation: 1s linear 0s infinite alternate light_job;
+  padding: 0;
 }
 
 @keyframes light_job {
   from {
-    background: #07ec29;
+    color: #03ff89;
   }
   to {
-    background: #0358108c;
+    color: #00000006;
   }
-}
-
-.look_job_title {
-  font-size: 1.5rem;
-  padding-bottom: 0.3rem;
-  color: #ffffffc8;
 }
 
 .wrapper_card {
@@ -74,14 +76,23 @@
 .card {
   border: 1px solid #ffffff14;
   border-color: color-mix(in oklab, #fff 10%, transparent);
-  border-radius: 1rem;
+  border-radius: 2rem;
   padding: 2rem;
-  margin-bottom: 15rem;
   background-color: color-mix(in oklab, #fff 5%, transparent);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   color: rgba(255, 255, 255, 0.7);
   font-weight: normal;
   font-size: 1.5rem;
+}
+
+.stacks_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 90%;
+  gap: 1rem;
+  margin: 2rem 0;
 }
 
 .stacks {
@@ -91,13 +102,11 @@
 }
 
 .stacks_item {
-  margin-top: 1rem;
   background-color: color-mix(in oklab, #fff 5%, transparent);
   border-radius: 3rem;
   padding: 0.8rem;
   font-size: 1.2rem;
   font-weight: normal;
-  color: rgba(255, 255, 255, 255);
   border: 1px solid #ffffff14;
   border-color: color-mix(in oklab, #fff 10%, transparent);
 }

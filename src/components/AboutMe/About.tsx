@@ -21,7 +21,6 @@ const CardAboutMe: React.FunctionComponent = () => {
     <div className={styles.wrapper_card}>
       <div className={styles.card}>
         <p className={styles.title}>About Me</p>
-        <br />
         <p>
           Ambitious fullstack developer from France, mastering ReactJS, NodeJS,
           and MongoDB, creating impactful solutions!
@@ -30,9 +29,6 @@ const CardAboutMe: React.FunctionComponent = () => {
           Interested in video game creation and having an eye for modern,
           ergonomic UX/UI.
         </p>
-        <br />
-        <p>My Main Stacks:</p>
-        <Stacks />
       </div>
     </div>
   );
@@ -43,8 +39,7 @@ const About: React.FunctionComponent = () => {
 
   const OpenToWork = looking_for_job && (
     <div className={styles.look_job_container}>
-      <div className={styles.circle}></div>
-      <p className={styles.look_job_title}>open to work.</p>
+      <p className={styles.look_job_title}>open to work</p>
     </div>
   );
 
@@ -57,14 +52,19 @@ const About: React.FunctionComponent = () => {
         alt="Ma photo de profil"
         width={200}
       />
-      <Socials />
 
       <h2 className={styles.name}>Samir Baatour</h2>
-      <p className={styles.job}>Fullstack developer</p>
+      <p className={styles.job}>Fullstack Developer</p>
 
       {OpenToWork}
+      <Socials />
 
       <CardAboutMe />
+
+      <div className={styles.stacks_container}>
+        <p className={styles.subtitle}>My Main Stacks</p>
+        <Stacks />
+      </div>
     </div>
   );
 };
