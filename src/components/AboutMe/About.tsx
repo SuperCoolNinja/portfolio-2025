@@ -38,13 +38,13 @@ const CardAboutMe: React.FunctionComponent = () => {
     <div className={styles.wrapper_card}>
       <div className={styles.card}>
         <p className={styles.title}>About Me</p>
-        <p>
-          Ambitious fullstack developer from France, mastering ReactJS, NodeJS,
-          and MongoDB, creating impactful solutions!
+        <p className={styles.content}>
+          Fullstack developer from France, continuously learning and improving
+          with ReactJS, NodeJS, and MongoDB.
         </p>
-        <p>
-          Interested in video game creation and having an eye for modern,
-          ergonomic UX/UI.
+        <p className={styles.content}>
+          Curious about video game development as well, with a growing interest
+          in creating modern, ergonomic, and user-friendly UX/UI designs.
         </p>
       </div>
     </div>
@@ -81,15 +81,18 @@ const About: React.FunctionComponent = () => {
       <Bio />
       {OpenToWork}
       <Socials />
-      <CardAboutMe />
-      <Items
-        subtitle="My Main Stacks"
-        items={["Typescript", "NodeJS", "ReactJS", "MongoDB"]}
-      />
-      <Items
-        subtitle="What I do ?"
-        items={["Frontend ", "Backend", "Game Development"]}
-      />
+
+      <div className={styles.wrapper_about_items}>
+        <CardAboutMe />
+        <Items
+          subtitle="My Main Stacks"
+          items={["Typescript", "NodeJS", "ReactJS", "MongoDB"]}
+        />
+        <Items
+          subtitle="What I do ?"
+          items={["Frontend ", "Backend", "Game Development"]}
+        />
+      </div>
     </div>
   );
 };

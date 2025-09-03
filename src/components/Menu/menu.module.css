@@ -9,7 +9,7 @@
   gap: 1rem;
   padding: 1rem;
   text-align: center;
-  width: 90%;
+  width: clamp(30rem, 33.33vw, 37.5rem);
   color: rgb(255, 255, 255);
   border: 1px solid #ffffff14;
   background-color: color-mix(in oklab, #fff 5%, transparent);
@@ -28,6 +28,7 @@
   background: rgba(255, 255, 255, 0.1);
   border-radius: 3rem;
   transition: background 0.2s;
+  font-size: clamp(1.5rem, 1.7vw, 1.7rem);
 }
 
 .item:not(:hover):not(.selected) {
@@ -40,3 +41,9 @@
   background: rgba(255, 255, 255, 0.2);
   cursor: pointer;
 }
+
+/* @media screen and (min-width: 1010px) {
+  .list {
+    width: 10rem;
+  }
+} */
