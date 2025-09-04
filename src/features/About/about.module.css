@@ -1,4 +1,5 @@
-.container {
+.container,
+.wrapper_bio_section {
   display: flex;
   flex-direction: column;
   justify-content: center;

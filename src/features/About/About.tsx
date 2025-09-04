@@ -14,23 +14,25 @@ const About: React.FunctionComponent = () => {
 
   return (
     <div className={styles.container}>
-      <LazyImage
-        className={styles.profil_picture}
-        src={profileFull}
-        placeholder={profileThumb}
-        alt="Profil Picture"
-        width={200}
-      />
+      <section className={styles.wrapper_bio_section}>
+        <LazyImage
+          className={styles.profil_picture}
+          src={profileFull}
+          placeholder={profileThumb}
+          alt="Profil Picture"
+          width={200}
+        />
 
-      <Bio />
+        <Bio />
 
-      {lookingForJob && (
-        <div className={styles.look_job_container}>
-          <p className={styles.look_job_title}>open to work</p>
-        </div>
-      )}
+        {lookingForJob && (
+          <div className={styles.look_job_container}>
+            <p className={styles.look_job_title}>open to work</p>
+          </div>
+        )}
 
-      <Socials />
+        <Socials />
+      </section>
 
       <section>
         <CardAboutMe />
