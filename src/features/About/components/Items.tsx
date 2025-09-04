@@ -1,17 +1,12 @@
+import Tags from "../../../components/Tags/Tags";
 import type { IAboutItems } from "../../../interfaces/IAboutItems";
 import styles from "../about.module.css";
 
-const Items: React.FunctionComponent<IAboutItems> = ({ subtitle, items }) => {
+const Items: React.FunctionComponent<IAboutItems> = ({ subtitle, labels }) => {
   return (
     <div className={styles.items_container}>
       <p className={styles.subtitle}>{subtitle}</p>
-      <ul className={styles.items}>
-        {items.map((v, i) => (
-          <li className={styles.item} key={i}>
-            {v}
-          </li>
-        ))}
-      </ul>
+      <Tags labels={labels} />
     </div>
   );
 };

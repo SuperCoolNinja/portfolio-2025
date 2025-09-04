@@ -94,7 +94,7 @@
   margin: 2rem 2rem 0;
 }
 
-.items {
+/* .items {
   display: flex;
   flex-direction: row;
   gap: 1rem;
@@ -109,11 +109,11 @@
   font-weight: normal;
   border: 1px solid var(--border-color);
 }
+*/
 
 .items_container:last-child {
   margin-bottom: 15rem;
 }
-
 @media screen and (min-width: 1010px) {
   .title,
   .subtitle {

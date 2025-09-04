@@ -35,7 +35,7 @@ const About: React.FunctionComponent = () => {
       <div className={styles.wrapper_about_items}>
         <CardAboutMe />
         {aboutItemsData.map((data, idx) => (
-          <Items key={idx} {...data} />
+          <Items key={idx} subtitle={data.subtitle} labels={data.labels} />
         ))}
       </div>
     </div>
