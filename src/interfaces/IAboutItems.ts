@@ -1,4 +1,4 @@
-export type ItemsProps = {
+export interface IAboutItems {
   subtitle: string;
   items: string[];
-};
+}

@@ -5,3 +5,19 @@
   align-items: center;
   height: 100%;
 }
+
+.wrapper_title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 5rem;
+}
+
+.title {
+  font-size: 3rem;
+}
+.subtitle {
+  color: rgba(255, 255, 255, 0.609);
+}

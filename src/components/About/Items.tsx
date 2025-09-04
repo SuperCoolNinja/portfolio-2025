@@ -1,7 +1,7 @@
+import type { IAboutItems } from "../../interfaces/IAboutItems";
 import styles from "./about.module.css";
-import type { ItemsProps } from "./types/items_type";
 
-const Items: React.FunctionComponent<ItemsProps> = ({ subtitle, items }) => {
+const Items: React.FunctionComponent<IAboutItems> = ({ subtitle, items }) => {
   return (
     <div className={styles.items_container}>
       <p className={styles.subtitle}>{subtitle}</p>

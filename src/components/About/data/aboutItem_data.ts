@@ -1,6 +1,6 @@
-import type { ItemsProps } from "../types/items_type";
+import type { IAboutItems } from "../../../interfaces/IAboutItems";
 
-export const aboutItemsData: ItemsProps[] = [
+export const aboutItemsData: IAboutItems[] = [
   {
     subtitle: "My Main Stacks",
     items: ["Typescript", "NodeJS", "ReactJS", "MongoDB"],
