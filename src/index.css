@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 
+:root {
+  --border-color: color-mix(in oklab, #fff 10%, transparent);
+  --bg-color-light: color-mix(in oklab, #fff 5%, transparent);
+  --text-light: rgba(255, 255, 255, 0.7);
+}
+
 *,
 ::before,
 ::after {
