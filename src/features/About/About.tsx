@@ -6,8 +6,9 @@ import LazyImage from "../../components/LazyImage/LazyImage";
 import Socials from "../Socials/Socials";
 import Bio from "./components/Bio";
 import CardAboutMe from "./components/CardAboutMe";
-import Items from "./components/Items";
 import { aboutItemsData } from "./data/aboutItem_data";
+import InfoSection from "./components/InfoSection";
+import Tag from "../../components/Tag/Tag";
 
 const About: React.FunctionComponent = () => {
   const lookingForJob = true;
@@ -32,12 +33,16 @@ const About: React.FunctionComponent = () => {
 
       <Socials />
 
-      <div className={styles.wrapper_about_items}>
+      <section>
         <CardAboutMe />
         {aboutItemsData.map((data, idx) => (
-          <Items key={idx} subtitle={data.subtitle} labels={data.labels} />
+          <InfoSection
+            key={idx}
+            subtitle={data.subtitle}
+            labels={data.labels}
+          />
         ))}
-      </div>
+      </section>
     </div>
   );
 };

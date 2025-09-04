@@ -1,5 +1,4 @@
-import type { ITags } from "./ITags";
-
-export interface IAboutItems extends ITags {
+export interface IAboutItems {
   subtitle: string;
+  labels: string[];
 }

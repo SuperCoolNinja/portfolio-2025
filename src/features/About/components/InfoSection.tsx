@@ -1,14 +1,17 @@
-import Tags from "../../../components/Tags/Tags";
 import type { IAboutItems } from "../../../interfaces/IAboutItems";
 import styles from "../about.module.css";
+import AboutTags from "./AboutTags";
 
-const Items: React.FunctionComponent<IAboutItems> = ({ subtitle, labels }) => {
+const InfoSection: React.FunctionComponent<IAboutItems> = ({
+  subtitle,
+  labels,
+}) => {
   return (
     <div className={styles.items_container}>
       <p className={styles.subtitle}>{subtitle}</p>
-      <Tags labels={labels} />
+      <AboutTags labels={labels} />
     </div>
   );
 };
 
-export default Items;
+export default InfoSection;
