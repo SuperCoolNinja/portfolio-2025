@@ -8,7 +8,6 @@ import Bio from "./components/Bio";
 import CardAboutMe from "./components/CardAboutMe";
 import { aboutItemsData } from "./data/aboutItem_data";
 import InfoSection from "./components/InfoSection";
-import Tag from "../../components/Tag/Tag";
 
 const About: React.FunctionComponent = () => {
   const lookingForJob = true;
