@@ -2,7 +2,7 @@ import {
   LogosGithubIcon,
   LogosLinkedinIcon,
   LogosYoutubeIcon,
-} from "../Logos/Logos";
+} from "../../components/Logos/Logos";
 import styles from "./socials.module.css";
 
 const Socials: React.FunctionComponent = () => {

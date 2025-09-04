@@ -1,5 +1,5 @@
-import type { IAboutItems } from "../../interfaces/IAboutItems";
-import styles from "./about.module.css";
+import type { IAboutItems } from "../../../interfaces/IAboutItems";
+import styles from "../about.module.css";
 
 const Items: React.FunctionComponent<IAboutItems> = ({ subtitle, items }) => {
   return (
