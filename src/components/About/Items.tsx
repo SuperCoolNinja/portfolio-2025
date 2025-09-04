@@ -1,9 +1,5 @@
 import styles from "./about.module.css";
-
-export type ItemsProps = {
-  subtitle: string;
-  items: string[];
-};
+import type { ItemsProps } from "./types/items_type";
 
 const Items: React.FunctionComponent<ItemsProps> = ({ subtitle, items }) => {
   return (

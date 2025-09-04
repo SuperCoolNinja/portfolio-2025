@@ -7,21 +7,10 @@ import Socials from "../Socials/Socials";
 import Bio from "./Bio";
 import CardAboutMe from "./CardAboutMe";
 import Items from "./Items";
-import type { ItemsProps } from "./Items";
+import { aboutItemsData } from "./data/aboutItem_data";
 
 const About: React.FC = () => {
   const lookingForJob = true;
-
-  const aboutItemsData: ItemsProps[] = [
-    {
-      subtitle: "My Main Stacks",
-      items: ["Typescript", "NodeJS", "ReactJS", "MongoDB"],
-    },
-    {
-      subtitle: "What I do ?",
-      items: ["Frontend", "Backend", "Game Development"],
-    },
-  ];
 
   return (
     <div className={styles.container}>
