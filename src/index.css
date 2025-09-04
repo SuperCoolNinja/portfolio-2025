@@ -19,8 +19,17 @@ html {
 body {
   font-family: "Outfit", sans-serif;
   font-size: 1.7rem;
-  height: 100vh;
-  background: #182032;
+  min-height: 100vh;
+  height: 100%;
+
+  /* background: #192434; */
+  background: linear-gradient(
+    to bottom right,
+    #35383e 0%,
+    #1a3054 50%,
+    #192434 100%
+  );
+  background-attachment: fixed;
   overflow-x: hidden;
   color: white;
 }

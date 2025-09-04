@@ -1,7 +1,9 @@
+import styles from "./project.module.css";
+
 const Project: React.FunctionComponent = () => {
   return (
-    <div>
-      <h3>Project</h3>
+    <div className={styles.container}>
+      <h3>Projects</h3>
     </div>
   );
 };
