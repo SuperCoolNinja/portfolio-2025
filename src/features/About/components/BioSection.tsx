@@ -5,10 +5,9 @@ import Socials from "../../Socials/Socials";
 import Bio from "./Bio";
 import profileThumb from "../../../assets/profil-thumb.jpg";
 import profileFull from "../../../assets/profil-full.jpg";
+import OpenToWork from "./OpenToWork";
 
 const BioSection = () => {
-  const lookingForJob = true;
-
   return (
     <section className={styles.wrapper_bio_section}>
       <LazyImage
@@ -19,11 +18,7 @@ const BioSection = () => {
         width={200}
       />
       <Bio />
-      {lookingForJob && (
-        <div className={styles.look_job_container}>
-          <p className={styles.look_job_title}>open to work</p>
-        </div>
-      )}
+      <OpenToWork />
       <Socials />
     </section>
   );
