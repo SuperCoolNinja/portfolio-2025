@@ -1,13 +1,12 @@
 import Tag from "../../../components/Tag/Tag";
 import styles from "../about.module.css";
 
-const AboutTags: React.FunctionComponent<{ labels: string[] }> = ({
-  labels,
-}) => {
+type AboutTagProps = { tags: string[] };
+const AboutTags: React.FunctionComponent<AboutTagProps> = ({ tags }) => {
   return (
     <ul className={styles.items}>
-      {labels.map((v, i) => (
-        <li key={i}>
+      {tags.map((v) => (
+        <li key={v}>
           <Tag label={v} />
         </li>
       ))}

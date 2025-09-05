@@ -7,10 +7,10 @@ const InfoSection: React.FunctionComponent<IAboutItems> = ({
   labels,
 }) => {
   return (
-    <div className={styles.items_container}>
+    <section className={styles.items_container}>
       <p className={styles.subtitle}>{subtitle}</p>
-      <AboutTags labels={labels} />
-    </div>
+      <AboutTags tags={labels} />
+    </section>
   );
 };
 
