@@ -107,4 +107,7 @@
   .content {
     font-size: 1.8rem;
   }
+  .card {
+    max-width: 110rem;
+  }
 }

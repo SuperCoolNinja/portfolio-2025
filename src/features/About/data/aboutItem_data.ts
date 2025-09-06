@@ -12,8 +12,6 @@ export const aboutItemsData: IAboutItems[] = [
 ];
 
 export const AboutMeSentances: string[] = [
-  "Fullstack developer from France, continuously learning and improving\
-          with ReactJS, NodeJS, and MongoDB.",
-  "Curious about video game development as well, with a growing interest\
-          in creating modern, ergonomic, and user-friendly UX/UI designs.",
+  "Self-taught fullstack developer from France. Learned coding on my own through practice, docs, and online resources.",
+  "Focused on ReactJS, NodeJS, and MongoDB, with an interest in game development and clean, user-friendly UX/UI design.",
 ];
