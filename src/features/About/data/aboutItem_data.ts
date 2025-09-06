@@ -10,3 +10,10 @@ export const aboutItemsData: IAboutItems[] = [
     labels: ["Frontend", "Backend", "Game Development"],
   },
 ];
+
+export const AboutMeSentances: string[] = [
+  "Fullstack developer from France, continuously learning and improving\
+          with ReactJS, NodeJS, and MongoDB.",
+  "Curious about video game development as well, with a growing interest\
+          in creating modern, ergonomic, and user-friendly UX/UI designs.",
+];
