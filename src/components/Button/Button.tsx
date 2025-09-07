@@ -1,5 +1,5 @@
 import type { Dispatch, SetStateAction } from "react";
-import styles from "./Button.module.css";
+import styles from "./button.module.css";
 
 export interface IButton {
   id: number;
