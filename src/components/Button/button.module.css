@@ -1,0 +1,28 @@
+.btn {
+  background-color: var(--bg-color-light);
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  border: 1px solid var(--border-color);
+  margin-top: 4rem;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background: var(--button-bg-hover-color);
+}
+
+.selected {
+  background: #1e90ff;
+  background-color: var(--button-bg-color);
+  font-weight: bold;
+}
+
+.look_job_container {
+  border: 1px solid var(--border-color);
+  border-radius: 1.2rem;
+  padding: 1rem 2rem;
+  background-color: var(--border-color);
+  margin: 1rem;
+}

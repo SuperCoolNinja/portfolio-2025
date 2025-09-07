@@ -4,6 +4,8 @@
   --border-color: color-mix(in oklab, #fff 10%, transparent);
   --bg-color-light: color-mix(in oklab, #fff 5%, transparent);
   --text-light: rgba(255, 255, 255, 0.7);
+  --button-bg-color: color-mix(in oklab, #fff 30%, transparent);
+  --button-bg-hover-color: color-mix(in oklab, #d9d9d9 50%, transparent);
 }
 
 *,
