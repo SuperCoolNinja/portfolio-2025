@@ -5,11 +5,19 @@
   font-size: 1.2rem;
   font-weight: normal;
   border: 1px solid var(--border-color);
+  transition: transform 0.3s;
+}
+
+.item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
+  transform: rotate(-1deg) scale(1.05);
+  cursor: default;
 }
 
 @media screen and (min-width: 1010px) {
   .item {
-    font-size: 1.5rem;
-    padding: 1.2rem 2.5rem;
+    font-size: 1.3rem;
+    padding: 1rem 2rem;
   }
 }

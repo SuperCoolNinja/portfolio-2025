@@ -22,7 +22,7 @@
 
 .title,
 .subtitle {
-  font-size: clamp(1.8rem, 2vw, 2rem);
+  font-size: clamp(1.8rem, 2vw, 2.5rem);
   color: white;
   font-weight: 600;
   margin-bottom: 1rem;
@@ -43,8 +43,14 @@
   border: 1px solid var(--border-color);
   border-radius: 1.2rem;
   padding: 1rem 2rem;
-  background-color: var(--border-color);
+  background-color: rgba(255, 255, 255, 0.1);
   margin: 1rem;
+}
+
+.look_job_container:hover {
+  cursor: default;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 30px rgba(255, 255, 255, 0.05);
 }
 
 .look_job_title {
@@ -100,14 +106,10 @@
 }
 
 @media screen and (min-width: 1010px) {
-  .title,
-  .subtitle {
-    font-size: 2.5rem;
-  }
   .content {
     font-size: 1.8rem;
   }
   .card {
-    max-width: 110rem;
+    max-width: 90rem;
   }
 }
