@@ -1,6 +1,10 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import Button from "../../components/Button/Button";
 import styles from "./project.module.css";
+import { projects } from "./data/projects_data";
+import type { IProjectsData } from "../../interfaces/IProjectsData";
+import type { ICategory } from "../../interfaces/ICategory";
+import CategoriesList from "./components/CategoriesList";
 
 const Project: React.FunctionComponent = () => {
   const buttons_filter: string[] = [
@@ -11,6 +15,30 @@ const Project: React.FunctionComponent = () => {
   ];
   const [selected, setSelected] = useState<string>(buttons_filter[0]);
 
+  const groupedCategories: ICategory[] = useMemo(() => {
+    const map = new Map<string, IProjectsData[]>();
+
+    projects.forEach((proj) => {
+      const cat = proj.category.trim().toLowerCase();
+      if (!map.has(cat)) {
+        map.set(cat, []);
+      }
+      map.get(cat)!.push(proj);
+    });
+
+    return Array.from(map.entries()).map(([name, projs]) => ({
+      name,
+      projects: projs,
+    }));
+  }, []);
+
+  const filteredCategories =
+    selected === "All"
+      ? groupedCategories
+      : groupedCategories.filter(
+          (c) => c.name.toLowerCase() === selected.toLowerCase()
+        );
+
   return (
     <div className={styles.container}>
       <section className={styles.wrapper_title}>
@@ -19,16 +47,19 @@ const Project: React.FunctionComponent = () => {
           A list of projects that I’ve worked on.
         </p>
       </section>
-
       <div className={styles.btn_container}>
         {buttons_filter.map((v, i) => (
           <Button
+            key={i}
             selected={selected}
             setSelected={setSelected}
-            id={i}
             label={v}
           />
         ))}
+      </div>
+
+      <div>
+        <CategoriesList filteredCategories={filteredCategories} />
       </div>
     </div>
   );

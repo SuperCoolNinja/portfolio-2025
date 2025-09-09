@@ -1,8 +1,10 @@
 import type { IProjectsData } from "../../../interfaces/IProjectsData";
+import { generateUniqueId } from "../../../utils/generateUniqueID";
 
 export const projects: IProjectsData[] = [
   {
-    title: "Resume Tool",
+    id: generateUniqueId(),
+    name: "Resume Tool",
     description:
       "A modern resume creation tool made with React as assignment from odinProject.",
     tags: ["Frontend"],
@@ -17,7 +19,8 @@ export const projects: IProjectsData[] = [
   },
 
   {
-    title: "Chatbox App",
+    id: generateUniqueId(),
+    name: "Chatbox App",
     description:
       "A chatboxApp using NodeJS, Express, Socket.io, ReactJS, TailwindCSS with only one room.",
     tags: ["Fullstack"],
@@ -31,7 +34,8 @@ export const projects: IProjectsData[] = [
   },
 
   {
-    title: "Pong Game",
+    id: generateUniqueId(),
+    name: "Pong Game",
     description: "a Pong Game made to learn and practise basic 2D Math Logic.",
     tags: ["Game Dev"],
     year: "2023",

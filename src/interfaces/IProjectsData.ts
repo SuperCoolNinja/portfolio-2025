@@ -1,5 +1,6 @@
 export interface IProjectsData {
-  title: string;
+  id: string;
+  name: string;
   description: string;
   tags: string[];
   year: string;

@@ -1,17 +1,9 @@
-import type { Dispatch, SetStateAction } from "react";
+import type { IButton } from "../../interfaces/IButton";
 import styles from "./button.module.css";
-
-export interface IButton {
-  id: number;
-  label: string;
-  selected: string;
-  setSelected: Dispatch<SetStateAction<string>>;
-}
 
 const Button: React.FunctionComponent<IButton> = ({
   selected,
   setSelected,
-  id,
   label,
 }) => {
   const handleSelected = () => {
@@ -23,7 +15,6 @@ const Button: React.FunctionComponent<IButton> = ({
   return (
     <div
       onClick={handleSelected}
-      key={id}
       className={`${styles.btn} ${isActive ? styles.selected : ""}`}
     >
       {label}
