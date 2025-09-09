@@ -37,7 +37,7 @@ body {
     #1a3054 50%,
     #192434 100%
   );
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   overflow-x: hidden;
   color: white;
 }
