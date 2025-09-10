@@ -75,11 +75,9 @@
 
 .item:not(.selected):hover {
   border-radius: 4rem;
-  background: linear-gradient(
-    145deg,
-    rgba(255, 255, 255, 0.1),
-    rgba(255, 255, 255, 0.1)
-  );
+  outline: none;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .item.selected {
