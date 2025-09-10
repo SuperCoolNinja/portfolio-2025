@@ -60,6 +60,11 @@
   padding: 0;
 }
 
+.look_job_title::selection {
+  background: transparent;
+  color: inherit;
+}
+
 @keyframes light_job {
   from {
     color: #03ff89;
