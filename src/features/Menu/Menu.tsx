@@ -26,14 +26,17 @@ const Menu: React.FunctionComponent<MenuProps> = ({
       highlightRef.current.style.left = `${
         rect.left - parentRect.left - offset
       }px`;
+    } else if (highlightRef.current) {
+      highlightRef.current.style.width = "0px";
+      highlightRef.current.style.left = "0px";
     }
   };
 
   useEffect(() => {
-    updateHighlight();
-
+    const timer = setTimeout(updateHighlight, 0);
     window.addEventListener("resize", updateHighlight);
     return () => {
+      clearTimeout(timer);
       window.removeEventListener("resize", updateHighlight);
     };
   }, [selected]);
