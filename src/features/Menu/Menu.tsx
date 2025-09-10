@@ -18,14 +18,10 @@ const Menu: React.FunctionComponent<MenuProps> = ({
       const rect = el.getBoundingClientRect();
       const parentRect = listRef.current.getBoundingClientRect();
 
-      const extraWidth = 100 / 2;
-      const totalWidth = rect.width + extraWidth;
-      const offset = extraWidth / 2;
+      const totalWidth = rect.width;
 
       highlightRef.current.style.width = `${totalWidth}px`;
-      highlightRef.current.style.left = `${
-        rect.left - parentRect.left - offset
-      }px`;
+      highlightRef.current.style.left = `${rect.left - parentRect.left}px`;
     } else if (highlightRef.current) {
       highlightRef.current.style.width = "0px";
       highlightRef.current.style.left = "0px";

@@ -32,16 +32,16 @@
 .highlight {
   position: absolute;
   top: 50%;
-  transform: translateY(-51%);
-  height: calc(100% + 1.5rem);
-  border-radius: 10rem;
+  transform: translateY(-50%);
+  height: 80%;
+  border-radius: 4rem;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: inset 1px 1px 2px rgba(255, 255, 255, 0.5),
     inset -1px -1px 2px rgba(0, 0, 0, 0.2), 0 4px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   background: linear-gradient(
     145deg,
-    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.01),
     rgba(255, 255, 255, 0.1)
   );
   width: 0;
@@ -60,7 +60,7 @@
   color: rgb(255, 255, 255);
   font-size: clamp(1.5rem, 1.7vw, 1.7rem);
   padding: 0.5rem 2rem;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .item:not(:hover):not(.selected) {
@@ -71,11 +71,19 @@
 .item.selected {
   cursor: pointer;
   position: relative;
-  transition: all 0.3s ease;
+}
+
+.item:not(.selected):hover {
+  border-radius: 4rem;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.1)
+  );
 }
 
 .item.selected {
-  transform: scale(1.18);
+  transform: scale(1.1);
   font-weight: 500;
 }
 
