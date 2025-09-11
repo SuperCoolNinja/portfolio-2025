@@ -41,16 +41,26 @@
 
 .look_job_container {
   border: 1px solid var(--border-color);
-  border-radius: 1.2rem;
   padding: 1rem 2rem;
-  background-color: rgba(255, 255, 255, 0.1);
   margin: 1rem;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.05)
+  );
+  border-color: color-mix(in oklab, #fff 8%, transparent);
+  border-radius: 10rem;
+  box-shadow: inset 1px 1px 2px rgba(255, 255, 255, 0.1),
+    inset -1px -1px 2px rgba(0, 0, 0, 0.2), 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s;
 }
 
 .look_job_container:hover {
   cursor: default;
-  background-color: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 4px 30px rgba(255, 255, 255, 0.05);
+  transform: scale(1.05);
+  box-shadow: inset 1px 1px 2px rgba(255, 255, 255, 0.5),
+    inset -1px -1px 2px rgba(0, 0, 0, 0.2), 0 4px 15px rgba(255, 255, 255, 0.5);
+  transition: all 0.2s;
 }
 
 .look_job_title {
@@ -58,6 +68,7 @@
   font-weight: normal;
   animation: 1s linear 0s infinite alternate light_job;
   padding: 0;
+  transition: all 0.2s;
 }
 
 .look_job_title::selection {
