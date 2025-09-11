@@ -67,20 +67,18 @@
   background: rgba(255, 255, 255, 0);
 }
 
-.item:hover,
-.item.selected {
+.item:not(.selected):hover,
+.item:not(.selected):focus {
   cursor: pointer;
   position: relative;
-}
-
-.item:not(.selected):hover {
-  border-radius: 4rem;
   outline: none;
   border: none;
-  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4rem;
+  background: rgba(255, 255, 255, 0.5);
 }
 
 .item.selected {
   transform: scale(1.05);
   font-weight: 500;
+  cursor: default;
 }
