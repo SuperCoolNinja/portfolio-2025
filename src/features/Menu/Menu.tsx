@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useCallback } from "react";
 import type { MenuProps } from "../../interfaces/IMenuProps";
 import styles from "./menu.module.css";
 
@@ -9,30 +9,25 @@ const Menu: React.FunctionComponent<MenuProps> = ({
 }) => {
   const listRef = useRef<HTMLUListElement>(null);
   const highlightRef = useRef<HTMLSpanElement>(null);
+  const selectedRef = useRef<HTMLLIElement | null>(null);
 
-  const updateHighlight = () => {
-    const el = document.querySelector<HTMLLIElement>(
-      `.${styles.item}.${styles.selected}`
-    );
-    if (el && listRef.current && highlightRef.current) {
-      const rect = el.getBoundingClientRect();
+  const updateHighlight = useCallback(() => {
+    if (selectedRef.current && listRef.current && highlightRef.current) {
+      const rect = selectedRef.current.getBoundingClientRect();
       const parentRect = listRef.current.getBoundingClientRect();
 
-      const totalWidth = rect.width;
-
-      highlightRef.current.style.width = `${totalWidth}px`;
+      highlightRef.current.style.width = `${rect.width}px`;
       highlightRef.current.style.left = `${rect.left - parentRect.left}px`;
     }
-  };
+  }, []);
 
   useEffect(() => {
-    const timer = setTimeout(updateHighlight, 0);
+    updateHighlight();
     window.addEventListener("resize", updateHighlight);
     return () => {
-      clearTimeout(timer);
       window.removeEventListener("resize", updateHighlight);
     };
-  }, [selected]);
+  }, [updateHighlight, selected]);
 
   return (
     <ul className={styles.list} ref={listRef}>
@@ -41,6 +36,7 @@ const Menu: React.FunctionComponent<MenuProps> = ({
         return (
           <li
             key={v}
+            ref={isSelected ? selectedRef : null}
             className={`${styles.item} ${isSelected ? styles.selected : ""}`}
             onClick={() => onSelect(v)}
           >
