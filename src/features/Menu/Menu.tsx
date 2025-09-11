@@ -22,9 +22,6 @@ const Menu: React.FunctionComponent<MenuProps> = ({
 
       highlightRef.current.style.width = `${totalWidth}px`;
       highlightRef.current.style.left = `${rect.left - parentRect.left}px`;
-    } else if (highlightRef.current) {
-      highlightRef.current.style.width = "0px";
-      highlightRef.current.style.left = "0px";
     }
   };
 
