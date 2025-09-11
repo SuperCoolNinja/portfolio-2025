@@ -58,7 +58,7 @@
   z-index: 1;
   text-align: center;
   color: rgb(255, 255, 255);
-  font-size: clamp(1.6rem, 1.8vw, 2rem);
+  font-size: clamp(1.6rem, 1.8vw, 1.8rem);
   padding: 0.5rem 2rem;
   transition: transform 0.3s ease;
 }
