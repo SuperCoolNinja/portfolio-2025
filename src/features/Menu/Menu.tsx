@@ -18,13 +18,34 @@ const Menu: React.FunctionComponent<MenuProps> = ({
 
       highlightRef.current.style.width = `${rect.width}px`;
       highlightRef.current.style.left = `${rect.left - parentRect.left}px`;
+      highlightRef.current.style.opacity = "1";
     }
   }, []);
 
   useEffect(() => {
-    updateHighlight();
+    let resizeObserver: ResizeObserver | null = null;
+
+    const initHighlight = () => {
+      requestAnimationFrame(() => {
+        updateHighlight();
+      });
+    };
+
+    initHighlight();
+
+    if (selectedRef.current) {
+      resizeObserver = new ResizeObserver(() => {
+        updateHighlight();
+      });
+      resizeObserver.observe(selectedRef.current);
+    }
+
     window.addEventListener("resize", updateHighlight);
+
     return () => {
+      if (resizeObserver) {
+        resizeObserver.disconnect();
+      }
       window.removeEventListener("resize", updateHighlight);
     };
   }, [updateHighlight, selected]);

@@ -8,9 +8,9 @@
   justify-content: center;
   align-items: flex-end;
   gap: 1rem;
-  padding: 1rem;
+  padding: clamp(1rem, 1.1vw, 1.5rem);
   text-align: center;
-  width: clamp(30rem, 33.33vw, 32rem);
+  width: clamp(30rem, 33.33vw, 45rem);
   color: rgb(255, 255, 255);
   border: 1px solid #ffffff14;
   background: linear-gradient(
@@ -21,7 +21,6 @@
   border-color: color-mix(in oklab, #fff 10%, transparent);
   border-radius: 10rem;
   transition: background 0.2s;
-  font-size: 1.5rem;
   backdrop-filter: blur(42px);
   -webkit-backdrop-filter: blur(42px);
   box-shadow: inset 1px 1px 2px rgba(255, 255, 255, 0.1),
@@ -33,7 +32,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  height: 80%;
+  height: 70%;
   border-radius: 4rem;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: inset 1px 1px 2px rgba(255, 255, 255, 0.5),
@@ -47,6 +46,7 @@
   width: 0;
   left: 0;
   z-index: 0;
+  opacity: 0;
 }
 
 .item::selection {
@@ -58,7 +58,7 @@
   z-index: 1;
   text-align: center;
   color: rgb(255, 255, 255);
-  font-size: clamp(1.5rem, 1.7vw, 1.7rem);
+  font-size: clamp(1.6rem, 1.8vw, 2rem);
   padding: 0.5rem 2rem;
   transition: transform 0.3s ease;
 }
