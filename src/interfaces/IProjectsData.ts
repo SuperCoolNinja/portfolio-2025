@@ -2,7 +2,7 @@ export interface IProjectsData {
   id: string;
   name: string;
   description: string;
-  tags: string[];
+  tag: string;
   year: string;
   stacks: string[];
   image: string;

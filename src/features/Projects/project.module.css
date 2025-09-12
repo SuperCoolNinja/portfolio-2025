@@ -68,6 +68,24 @@
   padding: 1rem;
 }
 
+.img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  display: block;
+  overflow: hidden;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.wrapper_title_tag {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-items: flex-start;
+  margin: 1rem;
+}
+
 @media screen and (min-width: 800px) {
   .btn_container {
     justify-content: center;

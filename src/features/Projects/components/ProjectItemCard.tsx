@@ -1,5 +1,7 @@
+import styles from "../project.module.css";
 import type { IProjectsData } from "../../../interfaces/IProjectsData";
 import Card from "../../../components/Card/Card";
+import Tag from "../../../components/Tag/Tag";
 
 const ProjectItemCard: React.FunctionComponent<{ project: IProjectsData }> = ({
   project,
@@ -7,11 +9,17 @@ const ProjectItemCard: React.FunctionComponent<{ project: IProjectsData }> = ({
   return (
     <Card
       style={{
-        padding: "1rem",
         borderRadius: "1.5rem",
       }}
     >
-      {project.name}
+      <img src={project.image} alt={project.name} className={styles.img} />
+      <div>
+        <div className={styles.wrapper_title_tag}>
+          <h4>{project.name}</h4>
+          <Tag label={project.tag} />
+        </div>
+        <p>{project.description}</p>
+      </div>
     </Card>
   );
 };

@@ -7,7 +7,7 @@ export const projects: IProjectsData[] = [
     name: "Resume Tool",
     description:
       "A modern resume creation tool made with React as assignment from odinProject.",
-    tags: ["Frontend"],
+    tag: "Frontend",
     year: "2024",
     stacks: ["ReactJS"],
     image:
@@ -23,7 +23,7 @@ export const projects: IProjectsData[] = [
     name: "Chatbox App",
     description:
       "A chatboxApp using NodeJS, Express, Socket.io, ReactJS, TailwindCSS with only one room.",
-    tags: ["Fullstack"],
+    tag: "Fullstack",
     year: "2023",
     stacks: ["ReactJS", "NodeJS", "Javascript", "Socket.IO", "TailwindCSS"],
     image:
@@ -37,7 +37,7 @@ export const projects: IProjectsData[] = [
     id: generateUniqueId(),
     name: "Pong Game",
     description: "a Pong Game made to learn and practise basic 2D Math Logic.",
-    tags: ["Game Dev"],
+    tag: "Game Dev",
     year: "2023",
     stacks: ["LUA", "LOVE2D"],
     image:

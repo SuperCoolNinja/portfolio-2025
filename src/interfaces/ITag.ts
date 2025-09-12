@@ -1,4 +1,6 @@
+import type { CSSProperties } from "react";
+
 export interface ITag {
   label: string;
-  classname?: string;
+  style?: CSSProperties;
 }
