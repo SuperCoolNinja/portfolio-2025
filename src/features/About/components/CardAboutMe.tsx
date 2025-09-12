@@ -1,3 +1,4 @@
+import Card from "../../../components/Card/Card";
 import styles from "../about.module.css";
 
 const CardAboutMe: React.FunctionComponent<{ sentances: string[] }> = ({
@@ -5,14 +6,21 @@ const CardAboutMe: React.FunctionComponent<{ sentances: string[] }> = ({
 }) => {
   return (
     <div className={styles.wrapper_card}>
-      <div className={styles.card}>
+      <Card
+        style={{
+          color: "var(--text-light)",
+          fontSize: "1.5rem",
+          marginBottom: "1rem",
+          padding: "2rem",
+        }}
+      >
         <p className={styles.title}>About Me</p>
         {sentances.map((v, i) => (
           <p key={i} className={styles.content}>
             {v}
           </p>
         ))}
-      </div>
+      </Card>
     </div>
   );
 };

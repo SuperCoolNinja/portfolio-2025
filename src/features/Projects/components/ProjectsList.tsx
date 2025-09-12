@@ -7,7 +7,7 @@ const ProjectLists: React.FunctionComponent<{ projects: IProjectsData[] }> = ({
   projects,
 }) => {
   return (
-    <div className={styles.list_container}>
+    <div className={styles.project_list_container}>
       {projects.map((v) => (
         <ProjectItemCard key={v.id} project={v} />
       ))}

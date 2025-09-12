@@ -42,3 +42,8 @@ body {
   overflow-x: hidden;
   color: white;
 }
+
+.card_project {
+  border-radius: 0.5rem !important;
+  padding: 1rem !important;
+}

@@ -58,7 +58,7 @@ const Project: React.FunctionComponent = () => {
         ))}
       </div>
 
-      <div>
+      <div className={styles.categories_container}>
         <CategoriesList filteredCategories={filteredCategories} />
       </div>
     </div>
