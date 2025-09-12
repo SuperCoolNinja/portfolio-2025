@@ -1,12 +1,23 @@
+import React, { type CSSProperties } from "react";
 import styles from "./card.module.css";
-import type { CSSProperties, ReactNode } from "react";
 
-const Card: React.FunctionComponent<{
-  children: ReactNode;
+type CardProps = {
+  children: React.ReactNode;
   style?: CSSProperties;
-}> = ({ children, style }) => {
+  maxWidth?: string;
+};
+
+const Card: React.FC<CardProps> = ({ children, style, maxWidth }) => {
   return (
-    <div style={style} className={styles.card}>
+    <div
+      className={styles.card}
+      style={{
+        borderRadius: "1.5rem",
+        maxWidth: maxWidth ?? "50rem",
+        margin: "0 auto",
+        ...style,
+      }}
+    >
       {children}
     </div>
   );

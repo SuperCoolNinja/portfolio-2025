@@ -50,10 +50,14 @@
   padding: 1rem;
 }
 
+.category_list:last-child {
+  margin-bottom: 15rem;
+}
+
 .category_title {
-  padding: 1rem 0;
   text-transform: capitalize;
-  font-size: clamp(1.8rem, 2vw, 2.5rem);
+  font-size: clamp(2rem, 2.3vw, 2.5rem);
+  margin: 2rem 0;
 }
 
 .project_list_container {
@@ -61,29 +65,51 @@
   gap: 2rem;
 }
 
-.project_card_container {
+.card_container {
   display: flex;
   flex-direction: column;
   margin-top: 1rem;
   padding: 1rem;
+  gap: 1rem;
 }
 
 .img {
   max-width: 100%;
   width: 100%;
-  height: auto;
+  /* object-fit: cover; */
+  height: 20rem;
   display: block;
   overflow: hidden;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
 }
 
-.wrapper_title_tag {
+.section_title_tag {
   display: flex;
   gap: 1rem;
   align-items: center;
   justify-items: flex-start;
-  margin: 1rem;
+}
+
+.card_description {
+  font-size: clamp(1.5rem, 2vw, 2rem);
+}
+
+.card_stacks_container {
+  display: flex;
+  gap: 1rem;
+}
+
+.card_icons_container {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+@media screen and (min-width: 1010px) {
+  .card {
+    max-width: 90rem;
+  }
 }
 
 @media screen and (min-width: 800px) {

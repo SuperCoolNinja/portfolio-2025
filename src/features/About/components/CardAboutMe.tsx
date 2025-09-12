@@ -7,6 +7,7 @@ const CardAboutMe: React.FunctionComponent<{ sentances: string[] }> = ({
   return (
     <div className={styles.wrapper_card}>
       <Card
+        maxWidth="90rem"
         style={{
           color: "var(--text-light)",
           fontSize: "1.5rem",

@@ -24,10 +24,10 @@ export const projects: IProjectsData[] = [
     id: generateUniqueId(),
     name: "Chatbox App",
     description:
-      "A chatboxApp using NodeJS, Express, Socket.io, ReactJS, TailwindCSS with only one room.",
+      "A chatboxApp using NodeJS, Express, Socket, ReactJS, TailwindCSS with only one room.",
     tag: "Fullstack",
     year: "2023",
-    stacks: ["ReactJS", "NodeJS", "Javascript", "Socket.IO", "TailwindCSS"],
+    stacks: ["ReactJS", "NodeJS", "Javascript", "Socket", "TailwindCSS"],
     image:
       "https://image.noelshack.com/fichiers/2024/26/3/1719430745-screenshot-2024-06-26-213857.png",
     category: "Web",
@@ -42,7 +42,7 @@ export const projects: IProjectsData[] = [
     description: "a Pong Game made to learn and practise basic 2D Math Logic.",
     tag: "Game Dev",
     year: "2023",
-    stacks: ["LUA", "LOVE2D"],
+    stacks: ["Lua", "Love2D"],
     image:
       "https://image.noelshack.com/fichiers/2024/26/3/1719431132-screenshot-2024-06-26-214537.png",
     category: "game development",

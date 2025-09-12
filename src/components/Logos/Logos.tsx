@@ -98,23 +98,18 @@ export function IconParkPreviewOpen(props: SVGProps<SVGSVGElement>) {
     <div title="demo">
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="hover:cursor-pointer hover:scale-125 transition-all"
-        width="1.7rem"
-        viewBox="0 0 48 48"
+        width="2.5rem"
+        viewBox="0 0 24 24"
         {...props}
+        fill="none"
+        stroke="#fff"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
       >
-        <g fill="none" strokeLinejoin="round" strokeWidth="4">
-          <path
-            fill="#2F88FF"
-            stroke="#000"
-            d="M24 36C35.0457 36 44 24 44 24C44 24 35.0457 12 24 12C12.9543 12 4 24 4 24C4 24 12.9543 36 24 36Z"
-          ></path>
-          <path
-            fill="#43CCF8"
-            stroke="#fff"
-            d="M24 29C26.7614 29 29 26.7614 29 24C29 21.2386 26.7614 19 24 19C21.2386 19 19 21.2386 19 24C19 26.7614 21.2386 29 24 29Z"
-          ></path>
-        </g>
+        <path d="M15 3h6v6"></path>
+        <path d="M10 14 21 3"></path>
+        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
       </svg>
     </div>
   );
