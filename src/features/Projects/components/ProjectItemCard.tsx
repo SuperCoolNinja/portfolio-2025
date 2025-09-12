@@ -16,7 +16,16 @@ const ProjectItemCard: React.FunctionComponent<{ project: IProjectsData }> = ({
       <div>
         <div className={styles.wrapper_title_tag}>
           <h4>{project.name}</h4>
-          <Tag label={project.tag} />
+          <Tag
+            style={{
+              fontFamily: "system-ui",
+              fontWeight: "600",
+              padding: "0.5rem",
+              backgroundColor: project.backgroundColor,
+              color: project.color,
+            }}
+            label={project.tag}
+          />
         </div>
         <p>{project.description}</p>
       </div>

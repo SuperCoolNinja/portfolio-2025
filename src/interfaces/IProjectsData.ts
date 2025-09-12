@@ -9,4 +9,6 @@ export interface IProjectsData {
   category: string;
   demo?: string;
   source_code?: string;
+  backgroundColor?: string;
+  color?: string;
 }

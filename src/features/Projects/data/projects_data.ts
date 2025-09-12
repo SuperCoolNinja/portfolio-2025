@@ -1,5 +1,6 @@
 import type { IProjectsData } from "../../../interfaces/IProjectsData";
 import { generateUniqueId } from "../../../utils/generateUniqueID";
+import { tagColors } from "../../../utils/colors";
 
 export const projects: IProjectsData[] = [
   {
@@ -16,6 +17,7 @@ export const projects: IProjectsData[] = [
     demo: "https://odin-assignment-resume.vercel.app/",
     source_code:
       "https://github.com/SuperCoolNinja/ResumeTool?tab=readme-ov-file",
+    ...tagColors["Frontend"],
   },
 
   {
@@ -31,6 +33,7 @@ export const projects: IProjectsData[] = [
     category: "Web",
     demo: "https://chatboxapp-client.vercel.app/",
     source_code: "https://github.com/SuperCoolNinja/chatboxapp-client",
+    ...tagColors["Fullstack"],
   },
 
   {
@@ -44,5 +47,6 @@ export const projects: IProjectsData[] = [
       "https://image.noelshack.com/fichiers/2024/26/3/1719431132-screenshot-2024-06-26-214537.png",
     category: "game development",
     source_code: "github.com/SuperCoolNinja/love2D-pongGame",
+    ...tagColors["Gamedev"],
   },
 ];
