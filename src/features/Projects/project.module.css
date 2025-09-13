@@ -62,7 +62,7 @@
 
 .project_list_container {
   display: flex;
-  gap: 2rem;
+  gap: 4rem;
 }
 
 .card_container {
@@ -74,12 +74,10 @@
 }
 
 .img {
-  max-width: 100%;
   width: 100%;
-  /* object-fit: cover; */
-  height: 20rem;
+  aspect-ratio: 16/9;
+  object-fit: cover;
   display: block;
-  overflow: hidden;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
 }
