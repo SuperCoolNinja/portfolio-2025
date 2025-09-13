@@ -44,9 +44,9 @@ const ProjectItemCard: React.FunctionComponent<{ project: IProjectsData }> = ({
                     fontFamily: "system-ui",
                     fontWeight: "600",
                     padding: "0.5rem 1rem",
-                    color: stackColors[stack.toUpperCase()].color,
+                    color: stackColors[stack?.toUpperCase()]?.color ?? "",
                     backgroundColor:
-                      stackColors[stack.toUpperCase()].backgroundColor,
+                      stackColors[stack?.toUpperCase()]?.backgroundColor ?? "",
                   }}
                   label={stack}
                 />
