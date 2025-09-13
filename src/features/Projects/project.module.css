@@ -74,10 +74,12 @@
 }
 
 .img {
+  max-width: 100%;
+  aspect-ratio: 16/8;
   width: 100%;
-  aspect-ratio: 16/9;
-  object-fit: cover;
+  height: 20rem;
   display: block;
+  overflow: hidden;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
 }
