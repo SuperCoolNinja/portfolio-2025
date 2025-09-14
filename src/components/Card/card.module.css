@@ -4,9 +4,3 @@
   background-color: var(--bg-color-light);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
-
-@media screen and (min-width: 1010px) {
-  .card {
-    max-width: 90rem;
-  }
-}

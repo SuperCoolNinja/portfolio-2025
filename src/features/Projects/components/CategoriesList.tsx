@@ -1,16 +1,20 @@
+import React from "react";
 import styles from "../project.module.css";
 import type { ICategory } from "../../../interfaces/ICategory";
-import CategoryItem from "./CategoryItem";
+import CardsListSlider from "./CardListSlider";
 
-const CategoriesList: React.FunctionComponent<{
-  filteredCategories: ICategory[];
-}> = ({ filteredCategories }) => {
+const CategoriesList: React.FC<{ filteredCategories: ICategory[] }> = ({
+  filteredCategories,
+}) => {
   return (
-    <ul className={styles.category_list}>
-      {filteredCategories.map((cat) => {
-        return <CategoryItem key={cat.name} category={cat} />;
-      })}
-    </ul>
+    <>
+      {filteredCategories.map((category) => (
+        <div key={category.name} className={styles.category_list}>
+          <h2 className={styles.category_title}>{category.name}</h2>
+          <CardsListSlider projects={category.projects} />
+        </div>
+      ))}
+    </>
   );
 };
 
