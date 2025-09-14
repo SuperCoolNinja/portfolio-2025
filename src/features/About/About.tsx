@@ -8,9 +8,11 @@ import BioSection from "./components/BioSection";
 const About: React.FunctionComponent = () => {
   return (
     <div className={styles.container}>
-      <BioSection />
+      <section>
+        <BioSection />
+      </section>
 
-      <div>
+      <section>
         <CardAboutMe sentances={AboutMeSentances} />
         {aboutItemsData.map((data) => (
           <InfoSection
@@ -19,7 +21,7 @@ const About: React.FunctionComponent = () => {
             labels={data.labels}
           />
         ))}
-      </div>
+      </section>
     </div>
   );
 };

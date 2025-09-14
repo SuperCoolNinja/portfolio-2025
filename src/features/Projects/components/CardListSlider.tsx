@@ -9,8 +9,10 @@ const CardListSlider: React.FunctionComponent<{
 }> = ({ projects }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [cardsPerView, setCardsPerView] = useState(1);
+  const [animation, setAnimation] = useState<"slide-in" | "slide-out" | "">(
+    "slide-in"
+  );
 
-  // Déterminer le nombre de cartes à afficher selon la taille d'écran
   useEffect(() => {
     const updateCardsPerView = () => {
       const width = window.innerWidth;
@@ -23,11 +25,9 @@ const CardListSlider: React.FunctionComponent<{
 
     updateCardsPerView();
     window.addEventListener("resize", updateCardsPerView);
-
     return () => window.removeEventListener("resize", updateCardsPerView);
   }, []);
 
-  // Reset index quand cardsPerView change
   useEffect(() => {
     setCurrentIndex(0);
   }, [cardsPerView]);
@@ -35,16 +35,22 @@ const CardListSlider: React.FunctionComponent<{
   const totalSlides = Math.ceil(projects.length / cardsPerView);
   const maxIndex = Math.max(0, totalSlides - 1);
 
+  const changeSlide = (newIndex: number) => {
+    setAnimation("slide-out");
+    setTimeout(() => {
+      setCurrentIndex(newIndex);
+      setAnimation("slide-in");
+    }, 400); // durée de la transition
+  };
+
   const goToPrevious = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? maxIndex : prevIndex - 1
-    );
+    const newIndex = currentIndex === 0 ? maxIndex : currentIndex - 1;
+    changeSlide(newIndex);
   };
 
   const goToNext = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === maxIndex ? 0 : prevIndex + 1
-    );
+    const newIndex = currentIndex === maxIndex ? 0 : currentIndex + 1;
+    changeSlide(newIndex);
   };
 
   const getVisibleProjects = () => {
@@ -59,7 +65,11 @@ const CardListSlider: React.FunctionComponent<{
   return (
     <div className={styles.carousel_container}>
       <div className={styles.carousel_wrapper}>
-        <div className={styles.cards_list_container}>
+        <div
+          className={`${styles.cards_list_container} ${
+            animation ? styles[animation] : ""
+          }`}
+        >
           {getVisibleProjects().map((project) => (
             <div key={project.id} className={styles.card_slide}>
               <CardItem project={project} />
@@ -84,8 +94,8 @@ const CardListSlider: React.FunctionComponent<{
                 className={`${styles.carousel_dot} ${
                   index === currentIndex ? styles.carousel_dot_active : ""
                 }`}
-                onClick={() => setCurrentIndex(index)}
-                aria-label={`next ${index + 1}`}
+                onClick={() => changeSlide(index)}
+                aria-label={`go to ${index + 1}`}
               />
             ))}
           </div>

@@ -82,7 +82,7 @@ export const projects: IProjectsData[] = [
 
   {
     id: generateUniqueId(),
-    name: "FLAPPYFLYTIME",
+    name: "Flappy Flytime",
     description:
       "A Flappy Bird clone created to learn the basics of the Unity API.",
     tag: "Game Dev",

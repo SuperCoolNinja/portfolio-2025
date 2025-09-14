@@ -7,7 +7,7 @@ import profileThumb from "../../../assets/profil-thumb.jpg";
 import profileFull from "../../../assets/profil.jpg";
 import OpenToWork from "./OpenToWork";
 
-const BioSection = () => {
+const BioSection: React.FunctionComponent = () => {
   return (
     <section className={styles.wrapper_bio_section}>
       <LazyImage
