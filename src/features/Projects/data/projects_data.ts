@@ -7,7 +7,7 @@ export const projects: IProjectsData[] = [
     id: generateUniqueId(),
     name: "Resume Tool",
     description:
-      "A modern resume creation tool made with React as assignment from odinProject.",
+      "A modern resume creation tool made as assignment from odinProject.",
     tag: "Frontend",
     year: "2024",
     stacks: ["ReactJS"],
@@ -23,8 +23,7 @@ export const projects: IProjectsData[] = [
   {
     id: generateUniqueId(),
     name: "Chatbox App",
-    description:
-      "A chatboxApp using NodeJS, Express, Socket, ReactJS, TailwindCSS with only one room.",
+    description: "A chatboxApp with only one room.",
     tag: "Fullstack",
     year: "2023",
     stacks: ["ReactJS", "NodeJS", "Javascript", "Socket", "TailwindCSS"],
