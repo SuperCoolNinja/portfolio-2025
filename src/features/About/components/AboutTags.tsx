@@ -1,4 +1,5 @@
 import Tag from "../../../components/Tag/Tag";
+import { Colors } from "../../../utils/colors";
 import styles from "../about.module.css";
 
 type AboutTagProps = { tags: string[] };
@@ -7,7 +8,13 @@ const AboutTags: React.FunctionComponent<AboutTagProps> = ({ tags }) => {
     <ul className={styles.items}>
       {tags.map((v) => (
         <li key={v}>
-          <Tag label={v} />
+          <Tag
+            style={{
+              backgroundColor: Colors[v.toUpperCase()]?.backgroundColor ?? "",
+              color: Colors[v.toUpperCase()]?.color ?? "",
+            }}
+            label={v}
+          />
         </li>
       ))}
     </ul>

@@ -7,7 +7,7 @@ export const aboutItemsData: IAboutItems[] = [
   },
   {
     subtitle: "What I do ?",
-    labels: ["Frontend", "Backend", "Game Development"],
+    labels: ["Frontend", "Backend", "GameDev"],
   },
 ];
 

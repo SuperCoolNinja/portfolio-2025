@@ -1,6 +1,6 @@
 import type { IProjectsData } from "../../../interfaces/IProjectsData";
 import { generateUniqueId } from "../../../utils/generateUniqueID";
-import { tagColors } from "../../../utils/colors";
+import { Colors } from "../../../utils/colors";
 
 export const projects: IProjectsData[] = [
   {
@@ -17,7 +17,7 @@ export const projects: IProjectsData[] = [
     demo: "https://odin-assignment-resume.vercel.app/",
     source_code:
       "https://github.com/SuperCoolNinja/ResumeTool?tab=readme-ov-file",
-    ...tagColors["Frontend"],
+    ...Colors["FRONTEND"],
   },
 
   {
@@ -32,7 +32,7 @@ export const projects: IProjectsData[] = [
     category: "Web",
     demo: "https://chatboxapp-client.vercel.app/",
     source_code: "https://github.com/SuperCoolNinja/chatboxapp-client",
-    ...tagColors["Fullstack"],
+    ...Colors["FULLSTACK"],
   },
 
   {
@@ -47,7 +47,7 @@ export const projects: IProjectsData[] = [
       "https://image.noelshack.com/fichiers/2024/26/3/1719430935-screenshot-2024-06-26-214215.png",
     category: "Web",
     source_code: "https://github.com/SuperCoolNinja/auth",
-    ...tagColors["Fullstack"],
+    ...Colors["FULLSTACK"],
   },
   {
     id: generateUniqueId(),
@@ -62,7 +62,7 @@ export const projects: IProjectsData[] = [
     category: "Web",
     source_code: "https://github.com/SuperCoolNinja/Paint-Web-App",
     demo: "https://supercoolninja.github.io/Paint-Web-App/",
-    ...tagColors["Frontend"],
+    ...Colors["FRONTEND"],
   },
 
   {
@@ -76,7 +76,7 @@ export const projects: IProjectsData[] = [
       "https://image.noelshack.com/fichiers/2024/26/3/1719431132-screenshot-2024-06-26-214537.png",
     category: "game development",
     source_code: "github.com/SuperCoolNinja/love2D-pongGame",
-    ...tagColors["Gamedev"],
+    ...Colors["GAMEDEV"],
   },
 
   {
@@ -91,6 +91,6 @@ export const projects: IProjectsData[] = [
       "https://image.noelshack.com/fichiers/2024/26/3/1719431180-screenshot-2024-06-26-214628.png",
     category: "game development",
     demo: "https://supercoolninja.itch.io/flappyflytime",
-    ...tagColors["Gamedev"],
+    ...Colors["GAMEDEV"],
   },
 ];

@@ -2,7 +2,7 @@ import React from "react";
 import styles from "../project.module.css";
 import type { IProjectsData } from "../../../interfaces/IProjectsData";
 import Tag from "../../../components/Tag/Tag";
-import { stackColors } from "../../../utils/colors";
+import { Colors } from "../../../utils/colors";
 import {
   IconParkPreviewOpen,
   LogosGithubIcon,
@@ -38,9 +38,9 @@ const CardItem: React.FunctionComponent<{ project: IProjectsData }> = ({
                     fontFamily: "system-ui",
                     fontWeight: "600",
                     padding: "0.5rem 1rem",
-                    color: stackColors[v?.toUpperCase()]?.color ?? "",
+                    color: Colors[v?.toUpperCase()]?.color ?? "",
                     backgroundColor:
-                      stackColors[v?.toUpperCase()]?.backgroundColor ?? "",
+                      Colors[v?.toUpperCase()]?.backgroundColor ?? "",
                   }}
                   label={v}
                 />
