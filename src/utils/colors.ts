@@ -15,7 +15,7 @@ export const Colors: Record<
     color: "rgba(255, 255, 255, 0.9)",
   },
   BACKEND: {
-    backgroundColor: "rgba(255, 165, 0, 0.2)", // orange doux
+    backgroundColor: "rgba(0, 0, 0, 0.2)", // orange doux
     color: "rgba(255, 255, 255, 0.9)",
   },
   LUA: {
@@ -43,7 +43,7 @@ export const Colors: Record<
     color: "rgba(255, 255, 255, 0.9)",
   },
   JAVASCRIPT: {
-    backgroundColor: "rgba(241, 196, 15, 0.2)", // jaune JS
+    backgroundColor: "rgba(0, 100, 255, 0.2)", // jaune JS
     color: "rgba(255, 255, 255, 0.9)", // texte noir pour contraste
   },
   SOCKET: {

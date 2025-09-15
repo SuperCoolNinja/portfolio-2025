@@ -106,7 +106,7 @@
 
 .card_container:hover {
   box-shadow: rgba(255, 255, 255, 0.5) 0px 20px 40px -10px;
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
 .wrapper_card {
@@ -160,7 +160,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 4rem;
   margin-top: 2rem;
 }
 
@@ -168,8 +168,8 @@
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 50%;
-  width: 3rem;
-  height: 3rem;
+  width: 4.5rem;
+  height: 4.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -188,8 +188,8 @@
 }
 
 .carousel_btn svg {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 /* DOTS */
@@ -275,12 +275,12 @@
   }
 
   .carousel_btn {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 3.3rem;
+    height: 3.3rem;
   }
 
   .carousel_btn svg {
-    width: 1.25rem;
-    height: 1.25rem;
+    width: 2.25rem;
+    height: 2.25rem;
   }
 }
