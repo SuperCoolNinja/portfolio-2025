@@ -29,6 +29,7 @@
 }
 
 .content {
+  font-size: 1.7rem;
   padding: 0.2rem;
 }
 
@@ -124,6 +125,6 @@
 
 @media screen and (min-width: 1010px) {
   .content {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 }
