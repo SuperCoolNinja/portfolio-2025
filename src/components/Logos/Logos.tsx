@@ -103,9 +103,9 @@ export function IconParkPreviewOpen(props: SVGProps<SVGSVGElement>) {
         {...props}
         fill="none"
         stroke="#fff"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       >
         <path d="M15 3h6v6"></path>
         <path d="M10 14 21 3"></path>
