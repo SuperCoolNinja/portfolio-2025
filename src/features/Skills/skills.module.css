@@ -29,10 +29,27 @@
 
 .card_container {
   width: 90%;
+  margin-bottom: 2rem;
+  transition: transform 0.2s;
 }
 
 .card_container:last-child {
   margin-bottom: 15rem;
+}
+
+.card {
+  margin-top: 5rem;
+  padding: 2rem;
+  border-bottom: 1px solid var(--border-color);
+  border-radius: 2rem;
+  background-color: var(--bg-color-light);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  box-shadow: rgba(255, 255, 255, 0.3) 0px 20px 40px -10px;
+  transform: scale(1.02);
 }
 
 .card_wrapper_tags {
@@ -46,18 +63,22 @@
 
 .card_wrapper {
   display: flex;
-  flex-wrap: wrap; /* permet de passer à la ligne suivante */
-  gap: 1rem; /* espace entre les cartes */
-  justify-content: center; /* alignement à gauche */
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
   align-items: center;
 }
 
-.card_container {
-  width: 90%; /* mobile par défaut */
-  margin-bottom: 2rem;
-}
-
 @media screen and (min-width: 1010px) {
+  .title {
+    font-size: 4rem;
+  }
+
+  .subtitle {
+    width: 100%;
+    font-size: 2rem;
+  }
+
   .card_wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -65,8 +86,12 @@
     width: 110rem;
   }
 
+  .card_title {
+    font-size: 2.5rem;
+  }
+
   .card_container {
-    flex: 0 0 calc(50% - 1rem); /* 2 cartes par ligne */
+    flex: 0 0 calc(50% - 1rem);
     max-width: calc(50% - 1rem);
     margin-bottom: 2rem;
   }
