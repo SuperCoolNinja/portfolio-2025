@@ -7,13 +7,21 @@ import {
   IconParkPreviewOpen,
   LogosGithubIcon,
 } from "../../../components/Logos/Logos";
+import LazyImage from "../../../components/LazyImage/LazyImage";
+import profileThumb from "../../../assets/load.jpg";
 
 const CardItem: React.FunctionComponent<{ project: IProjectsData }> = ({
   project,
 }) => {
   return (
     <div className={styles.card_container}>
-      <img src={project.image} alt={project.name} className={styles.img} />
+      <LazyImage
+        className={styles.img}
+        src={project.image}
+        placeholder={profileThumb}
+        alt="Card Picture"
+        width={200}
+      />
       <div className={styles.wrapper_card}>
         <div className={styles.wrapper_name_tag}>
           <h4 className={styles.name}>{project.name}</h4>
