@@ -18,6 +18,10 @@ export const Colors: Record<
     backgroundColor: "rgba(52, 58, 64, 0.2)", // gris sombre
     color: "#fff",
   },
+  GAMEMODS: {
+    backgroundColor: "rgba(20, 120, 64, 0.2)",
+    color: "#fff",
+  },
   LUA: {
     backgroundColor: "rgba(65, 105, 225, 0.2)", // bleu royal
     color: "#fff",

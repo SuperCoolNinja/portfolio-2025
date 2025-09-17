@@ -93,4 +93,49 @@ export const projects: IProjectsData[] = [
     demo: "https://supercoolninja.itch.io/flappyflytime",
     ...Colors["GAMEDEV"],
   },
+
+  {
+    id: generateUniqueId(),
+    name: "GTA V MARKER",
+    description:
+      "This project enables you to set markers and watch the distance between you and your set marker on the screen. It also allows you to ping a target with the marked distance in GTA V solo play.",
+    tag: "Game Modification",
+    year: "2022",
+    stacks: ["C++"],
+    image: "https://img.gta5-mods.com/q95/images/gta_marker/cfd0e8-2.png",
+    category: "Game Modification",
+    demo: "https://www.gta5-mods.com/scripts/gta_marker",
+    ...Colors["GAMEMODS"],
+  },
+
+  {
+    id: generateUniqueId(),
+    name: "GTA V CONSOLE",
+    description:
+      "A mod for GTA V solo that allows the use of a console for easy debugging of code or simply using commands to perform certain tasks.",
+    tag: "Game Modification",
+    year: "2022",
+    stacks: ["C++", "IMGUI"],
+    image:
+      "https://img.gta5-mods.com/q95/images/gta_console/0c62c7-Screeen.png",
+    category: "Game Modification",
+    demo: "https://www.gta5-mods.com/tools/gta_console",
+    source_code: "https://github.com/GTAV-MODS/GTA_Console",
+    ...Colors["GAMEMODS"],
+  },
+
+  {
+    id: generateUniqueId(),
+    name: "Gravity Gun",
+    description:
+      "A mod for GTA V solo which allows the ability to make objects gravitate and freeze them.",
+    tag: "Game Modification",
+    year: "2022",
+    stacks: ["C++"],
+    image:
+      "https://img.gta5-mods.com/q95/images/ngravitygun-v1/51c15b-screenB.jpg",
+    category: "Game Modification",
+    demo: "https://www.gta5-mods.com/scripts/ngravitygun-v1",
+    ...Colors["GAMEMODS"],
+  },
 ];

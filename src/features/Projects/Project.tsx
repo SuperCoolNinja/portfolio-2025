@@ -1,5 +1,5 @@
 import styles from "./project.module.css";
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
 import type { ICategory } from "../../interfaces/ICategory";
 import type { IProjectsData } from "../../interfaces/IProjectsData";
 import { projects } from "./data/projects_data";
@@ -14,6 +14,23 @@ const Project: React.FunctionComponent = () => {
     "Game Modification",
   ];
   const [selected, setSelected] = useState<string>(buttons_filter[0]);
+  const [isVisible, setIsVisible] = useState(false);
+
+  const [fade, setFade] = useState<"fade-in" | "fade-out">("fade-in");
+
+  const handleFilterChange = (newFilter: string) => {
+    setFade("fade-out");
+    setTimeout(() => {
+      setSelected(newFilter);
+      setFade("fade-in");
+    }, 300);
+  };
+
+  // Animation fade in out to not show the cards directly but smooth instead :
+  useEffect(() => {
+    const timeout = setTimeout(() => setIsVisible(true), 100);
+    return () => clearTimeout(timeout);
+  }, []);
 
   const groupedCategories: ICategory[] = useMemo(() => {
     const map = new Map<string, IProjectsData[]>();
@@ -40,7 +57,11 @@ const Project: React.FunctionComponent = () => {
         );
 
   return (
-    <div className={styles.container}>
+    <div
+      className={`${styles.container} ${
+        isVisible ? styles.fadeIn : styles.hidden
+      }`}
+    >
       <section className={styles.wrapper_title}>
         <h1 className={styles.title}>Projects</h1>
         <p className={styles.subtitle}>
@@ -52,13 +73,13 @@ const Project: React.FunctionComponent = () => {
           <Button
             key={i}
             selected={selected}
-            setSelected={setSelected}
+            setSelected={() => handleFilterChange(v)}
             label={v}
           />
         ))}
       </div>
 
-      <div className={styles.categories_container}>
+      <div className={`${styles.categories_container} ${styles[fade]}`}>
         <CategoriesList filteredCategories={filteredCategories} />
       </div>
     </div>

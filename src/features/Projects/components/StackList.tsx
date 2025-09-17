@@ -15,8 +15,9 @@ const StackList: React.FunctionComponent<{ stacks: string[] }> = ({
                 fontFamily: "system-ui",
                 fontWeight: "600",
                 padding: "0.5rem 1rem",
-                color: Colors[v?.toUpperCase()].color ?? "",
-                backgroundColor: Colors[v?.toUpperCase()].backgroundColor ?? "",
+                color: Colors[v?.toUpperCase()]?.color ?? "",
+                backgroundColor:
+                  Colors[v?.toUpperCase()]?.backgroundColor ?? "",
               }}
               label={v}
             />
