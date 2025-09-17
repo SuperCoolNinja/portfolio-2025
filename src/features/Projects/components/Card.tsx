@@ -29,6 +29,7 @@ const CardItem: React.FunctionComponent<{ project: IProjectsData }> = ({
         <p className={styles.description}>{project.description}</p>
         <StackList stacks={project.stacks} />
         <BottomCardIcons
+          year={project.year}
           demo={project.demo}
           source_code={project.source_code}
         />

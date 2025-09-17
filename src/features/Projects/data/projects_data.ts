@@ -100,7 +100,7 @@ export const projects: IProjectsData[] = [
     description:
       "This project enables you to set markers and watch the distance between you and your set marker on the screen. It also allows you to ping a target with the marked distance in GTA V solo play.",
     tag: "Game Modification",
-    year: "2022",
+    year: "2023",
     stacks: ["C++"],
     image: "https://img.gta5-mods.com/q95/images/gta_marker/cfd0e8-2.png",
     category: "Game Modification",
@@ -130,7 +130,7 @@ export const projects: IProjectsData[] = [
     description:
       "A mod for GTA V solo which allows the ability to make objects gravitate and freeze them.",
     tag: "Game Modification",
-    year: "2022",
+    year: "2020",
     stacks: ["C++"],
     image:
       "https://img.gta5-mods.com/q95/images/ngravitygun-v1/51c15b-screenB.jpg",
