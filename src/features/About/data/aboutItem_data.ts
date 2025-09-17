@@ -12,6 +12,6 @@ export const aboutItemsData: IAboutItems[] = [
 ];
 
 export const AboutMeSentances: string[] = [
-  "Self-taught fullstack developer from France who enjoy turning ideas into small projects to learn.",
+  "I'm a self-taught Fullstack developer from France who enjoy turning ideas into small projects to learn.",
   "Also interested in game development and clean, user-friendly UX/UI design.",
 ];

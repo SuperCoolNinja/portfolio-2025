@@ -17,6 +17,7 @@ const BioSection: React.FunctionComponent = () => {
         alt="Profil Picture"
         width={200}
       />
+
       <Bio />
       <OpenToWork />
       <Socials />

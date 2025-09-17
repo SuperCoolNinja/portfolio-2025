@@ -13,6 +13,26 @@
   display: block;
   border-radius: 100%;
   margin-top: 2rem;
+  -webkit-animation: 1.5s ease-in-out 0s forwards img_blob;
+  animation: 1.5s ease-in-out 0s forwards img_blob;
+  opacity: 0;
+  transition: opacity 0.01s;
+}
+
+@keyframes img_blob {
+  0% {
+    transform: scale(0.3);
+    box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.1),
+      inset -1px -1px 1px rgba(0, 0, 0, 0.2), 0 4px 15px rgba(255, 255, 255, 1);
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .name {
@@ -96,6 +116,18 @@
   font-size: 1.5rem;
   margin-bottom: 1rem;
   padding: 2rem;
+  animation: fade_in_up 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes fade_in_up {
+  from {
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .wrapper_card {
@@ -125,6 +157,6 @@
 
 @media screen and (min-width: 1010px) {
   .content {
-    font-size: 2rem;
+    font-size: 1.9rem;
   }
 }
