@@ -2,7 +2,7 @@ import styles from "./project.module.css";
 import { useMemo, useState, useEffect } from "react";
 import type { ICategory } from "../../interfaces/ICategory";
 import type { IProjectsData } from "../../interfaces/IProjectsData";
-import { projects } from "./data/projects_data";
+import { projects } from "../../data/projects_data";
 import Button from "../../components/Button/Button";
 import CategoriesList from "./components/CategoriesList";
 

@@ -1,6 +1,6 @@
-import type { IProjectsData } from "../../../interfaces/IProjectsData";
-import { generateUniqueId } from "../../../utils/generateUniqueID";
-import { Colors } from "../../../utils/colors";
+import type { IProjectsData } from "../interfaces/IProjectsData";
+import { generateUniqueId } from "../utils/generateUniqueID";
+import { Colors } from "../utils/colors";
 
 export const projects: IProjectsData[] = [
   {
