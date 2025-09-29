@@ -30,14 +30,12 @@ body {
   min-height: 100vh;
   height: 100%;
 
-  /* background: #192434; */
   background: linear-gradient(
     to bottom right,
     #2d3b53 0%,
     #122444 50%,
-    #2d3b53 100%
+    #2d3b53 200%
   );
-  /* background-attachment: fixed; */
 
   overflow-x: hidden;
   color: white;
