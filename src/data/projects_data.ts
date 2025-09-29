@@ -5,23 +5,6 @@ import { Colors } from "../utils/colors";
 export const projects: IProjectsData[] = [
   {
     id: generateUniqueId(),
-    name: "Resume Tool",
-    description:
-      "A modern resume creation tool made as assignment from odinProject.",
-    tag: "Frontend",
-    year: "2024",
-    stacks: ["ReactJS"],
-    image:
-      "https://image.noelshack.com/fichiers/2024/31/7/1722792178-image.png",
-    category: "Web",
-    demo: "https://odin-assignment-resume.vercel.app/",
-    source_code:
-      "https://github.com/SuperCoolNinja/ResumeTool?tab=readme-ov-file",
-    ...Colors["FRONTEND"],
-  },
-
-  {
-    id: generateUniqueId(),
     name: "Chatbox App",
     description: "A chatboxApp with only one room.",
     tag: "Fullstack",
