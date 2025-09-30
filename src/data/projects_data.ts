@@ -13,7 +13,7 @@ export const projects: IProjectsData[] = [
     image:
       "https://image.noelshack.com/fichiers/2024/26/3/1719430745-screenshot-2024-06-26-213857.png",
     category: "Web",
-    demo: "https://chatboxapp-client.vercel.app/",
+    demo: "https://chatbox-client-demo.netlify.app/",
     source_code: "https://github.com/SuperCoolNinja/chatboxapp-client",
     ...Colors["FULLSTACK"],
   },
