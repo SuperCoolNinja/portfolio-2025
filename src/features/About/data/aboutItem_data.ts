@@ -12,7 +12,7 @@ export const aboutItemsData: IAboutItems[] = [
 ];
 
 export const AboutMeSentances: string[] = [
-  "I'm a self-taught fullstack developer from France, with a strong focus on frontend.",
-  "Also interested in game development and clean, user-friendly UX/UI design.",
+  "Fullstack web developer with a focus on frontend.",
+  "I build modern, responsive websites and also enjoy modding and game development.",
   "Looking for a junior frontend role where I can grow in React/TypeScript.",
 ];
