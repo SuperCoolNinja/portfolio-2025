@@ -1,125 +1,130 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import styles from "../project.module.css";
+import { ArrowBigLeft, ArrowBigRight } from "lucide-react";
 import type { IProjectsData } from "../../../interfaces/IProjectsData";
 import CardItem from "./Card";
-import { ArrowBigLeft, ArrowBigRight } from "lucide-react";
+import { useCarousel } from "../hooks/useCarousel";
 
-const CardListSlider: React.FunctionComponent<{
-  projects: IProjectsData[];
-}> = ({ projects }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [cardsPerView, setCardsPerView] = useState(1);
-  const [animation, setAnimation] = useState<"slide-in" | "slide-out" | "">(
-    "slide-in"
+const NavButton = ({
+  direction,
+  onClick,
+}: {
+  direction: "prev" | "next";
+  onClick: () => void;
+}) => {
+  const Icon = direction === "prev" ? ArrowBigLeft : ArrowBigRight;
+  const positionClass =
+    direction === "prev" ? styles.carousel_nav_prev : styles.carousel_nav_next;
+
+  return (
+    <div className={`${styles.carousel_nav} ${positionClass}`}>
+      <button
+        className={styles.carousel_btn}
+        onClick={onClick}
+        aria-label={direction}
+      >
+        <Icon />
+      </button>
+    </div>
   );
+};
 
-  useEffect(() => {
+const Dots = ({
+  total,
+  current,
+  onSelect,
+}: {
+  total: number;
+  current: number;
+  onSelect: (index: number) => void;
+}) => (
+  <div className={styles.carousel_controls}>
+    <div className={styles.carousel_dots}>
+      {Array.from({ length: total }).map((_, i) => (
+        <button
+          key={i}
+          className={`${styles.carousel_dot} ${
+            i === current ? styles.carousel_dot_active : ""
+          }`}
+          onClick={() => onSelect(i)}
+          aria-label={`go to slide ${i + 1}`}
+        />
+      ))}
+    </div>
+  </div>
+);
+
+const CardsList = ({
+  projects,
+  animation,
+}: {
+  projects: IProjectsData[];
+  animation: "slide-in" | "slide-out" | "";
+}) => (
+  <div
+    className={`${styles.cards_list_container} ${
+      animation ? styles[animation] : ""
+    }`}
+  >
+    {projects.map((p) => (
+      <div key={p.id} className={styles.card_slide}>
+        <CardItem project={p} />
+      </div>
+    ))}
+  </div>
+);
+
+const CardListSlider = ({ projects }: { projects: IProjectsData[] }) => {
+  const [cardsPerView, setCardsPerView] = useState(2); // ← état responsive
+
+  React.useEffect(() => {
     const updateCardsPerView = () => {
-      const width = window.innerWidth;
-      if (width >= 768) {
-        setCardsPerView(2);
-      } else {
-        setCardsPerView(1);
-      }
+      setCardsPerView(window.innerWidth >= 768 ? 2 : 1);
     };
     updateCardsPerView();
     window.addEventListener("resize", updateCardsPerView);
     return () => window.removeEventListener("resize", updateCardsPerView);
   }, []);
 
-  useEffect(() => {
-    setCurrentIndex(0);
-  }, [cardsPerView]);
+  const { current, total, visible, setCurrent } = useCarousel(
+    projects,
+    cardsPerView
+  );
 
-  const totalSlides = Math.ceil(projects.length / cardsPerView);
-  const maxIndex = Math.max(0, totalSlides - 1);
+  const [animation, setAnimation] = useState<"slide-in" | "slide-out" | "">(
+    "slide-in"
+  );
 
-  const changeSlide = (newIndex: number) => {
+  const changeSlide = (index: number) => {
     setAnimation("slide-out");
     setTimeout(() => {
-      setCurrentIndex(newIndex);
+      setCurrent(index);
       setAnimation("slide-in");
     }, 400);
   };
 
-  const goToPrevious = () => {
-    const newIndex = currentIndex === 0 ? maxIndex : currentIndex - 1;
-    changeSlide(newIndex);
-  };
-
-  const goToNext = () => {
-    const newIndex = currentIndex === maxIndex ? 0 : currentIndex + 1;
-    changeSlide(newIndex);
-  };
-
-  const getVisibleProjects = () => {
-    const startIndex = currentIndex * cardsPerView;
-    return projects.slice(startIndex, startIndex + cardsPerView);
-  };
-
-  if (projects.length === 0) {
-    return <div>Aucun projet à afficher</div>;
-  }
+  if (!projects.length) return <div>Aucun projet à afficher</div>;
 
   return (
     <div className={styles.carousel_container}>
       <div className={styles.carousel_wrapper}>
-        {/* Bouton Previous sur le côté gauche */}
-        {totalSlides > 1 && (
-          <div className={`${styles.carousel_nav} ${styles.carousel_nav_prev}`}>
-            <button
-              className={styles.carousel_btn}
-              onClick={goToPrevious}
-              aria-label="prev"
-            >
-              <ArrowBigLeft />
-            </button>
-          </div>
+        {total > 1 && (
+          <NavButton
+            direction="prev"
+            onClick={() => changeSlide((current - 1 + total) % total)}
+          />
         )}
-
-        {/* Cards */}
-        <div
-          className={`${styles.cards_list_container} ${
-            animation ? styles[animation] : ""
-          }`}
-        >
-          {getVisibleProjects().map((project) => (
-            <div key={project.id} className={styles.card_slide}>
-              <CardItem project={project} />
-            </div>
-          ))}
-        </div>
-
-        {/* Bouton Next sur le côté droit */}
-        {totalSlides > 1 && (
-          <div className={`${styles.carousel_nav} ${styles.carousel_nav_next}`}>
-            <button
-              className={styles.carousel_btn}
-              onClick={goToNext}
-              aria-label="next"
-            >
-              <ArrowBigRight />
-            </button>
-          </div>
+        <CardsList projects={visible} animation={animation} />
+        {total > 1 && (
+          <NavButton
+            direction="next"
+            onClick={() => changeSlide((current + 1) % total)}
+          />
         )}
       </div>
 
-      {/* Dots en dessous */}
-      {totalSlides > 1 && (
-        <div className={styles.carousel_controls}>
-          <div className={styles.carousel_dots}>
-            {Array.from({ length: totalSlides }).map((_, index) => (
-              <button
-                key={index}
-                className={`${styles.carousel_dot} ${
-                  index === currentIndex ? styles.carousel_dot_active : ""
-                }`}
-                onClick={() => changeSlide(index)}
-                aria-label={`go to ${index + 1}`}
-              />
-            ))}
-          </div>
-        </div>
+      {total > 1 && (
+        <Dots total={total} current={current} onSelect={changeSlide} />
       )}
     </div>
   );
