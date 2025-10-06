@@ -22,7 +22,6 @@ const CardListSlider: React.FunctionComponent<{
         setCardsPerView(1);
       }
     };
-
     updateCardsPerView();
     window.addEventListener("resize", updateCardsPerView);
     return () => window.removeEventListener("resize", updateCardsPerView);
@@ -40,7 +39,7 @@ const CardListSlider: React.FunctionComponent<{
     setTimeout(() => {
       setCurrentIndex(newIndex);
       setAnimation("slide-in");
-    }, 400); // durée de la transition
+    }, 400);
   };
 
   const goToPrevious = () => {
@@ -65,6 +64,20 @@ const CardListSlider: React.FunctionComponent<{
   return (
     <div className={styles.carousel_container}>
       <div className={styles.carousel_wrapper}>
+        {/* Bouton Previous sur le côté gauche */}
+        {totalSlides > 1 && (
+          <div className={`${styles.carousel_nav} ${styles.carousel_nav_prev}`}>
+            <button
+              className={styles.carousel_btn}
+              onClick={goToPrevious}
+              aria-label="prev"
+            >
+              <ArrowBigLeft />
+            </button>
+          </div>
+        )}
+
+        {/* Cards */}
         <div
           className={`${styles.cards_list_container} ${
             animation ? styles[animation] : ""
@@ -76,17 +89,24 @@ const CardListSlider: React.FunctionComponent<{
             </div>
           ))}
         </div>
+
+        {/* Bouton Next sur le côté droit */}
+        {totalSlides > 1 && (
+          <div className={`${styles.carousel_nav} ${styles.carousel_nav_next}`}>
+            <button
+              className={styles.carousel_btn}
+              onClick={goToNext}
+              aria-label="next"
+            >
+              <ArrowBigRight />
+            </button>
+          </div>
+        )}
       </div>
 
+      {/* Dots en dessous */}
       {totalSlides > 1 && (
         <div className={styles.carousel_controls}>
-          <button
-            className={styles.carousel_btn}
-            onClick={goToPrevious}
-            aria-label="prev"
-          >
-            <ArrowBigLeft />
-          </button>
           <div className={styles.carousel_dots}>
             {Array.from({ length: totalSlides }).map((_, index) => (
               <button
@@ -99,13 +119,6 @@ const CardListSlider: React.FunctionComponent<{
               />
             ))}
           </div>
-          <button
-            className={styles.carousel_btn}
-            onClick={goToNext}
-            aria-label="next"
-          >
-            <ArrowBigRight />
-          </button>
         </div>
       )}
     </div>

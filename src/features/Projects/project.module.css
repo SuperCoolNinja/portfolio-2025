@@ -61,6 +61,7 @@
 .carousel_container {
   width: 100%;
   max-width: 100%;
+  position: relative;
 }
 
 .carousel_wrapper {
@@ -131,7 +132,7 @@
   gap: 2rem;
 }
 
-/* La partie qui contient les icônes et l’année */
+/* La partie qui contient les icônes et l'année */
 .wrapper_icon_years {
   display: flex;
   justify-content: space-between;
@@ -181,27 +182,41 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 4rem;
+  gap: 1rem;
   margin-top: 2rem;
 }
 
-.carousel_btn {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
-  width: 4.5rem;
-  height: 4.5rem;
+.carousel_nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   display: flex;
   align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  color: white;
+  z-index: 10;
 }
 
+.carousel_nav_prev {
+  left: -6rem;
+}
+
+.carousel_nav_next {
+  right: -6rem;
+}
+
+.carousel_btn {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.7);
+  transition: all 0.3s ease;
+}
 .carousel_btn:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
   transform: scale(1.05);
+  cursor: pointer;
 }
 
 .carousel_btn:active {
@@ -209,8 +224,8 @@
 }
 
 .carousel_btn svg {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2rem;
+  height: 2rem;
 }
 
 /* DOTS */
@@ -218,6 +233,7 @@
   display: flex;
   gap: 0.5rem;
   align-items: center;
+  justify-content: center;
 }
 
 .carousel_dot {
@@ -268,7 +284,7 @@
 
 .hidden {
   opacity: 0;
-  transform: translateY(20px); /* petit slide vers le haut */
+  transform: translateY(20px);
 }
 
 .fadeIn {
@@ -285,21 +301,30 @@
 }
 
 /* RESPONSIVE */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1110px) {
   .card_container {
-    max-width: 90vw;
+    max-width: 80vw;
   }
 
-  .carousel_btn {
-    width: 3.3rem;
-    height: 3.3rem;
+  .card_slide {
+    flex: 1;
+    max-width: 35rem;
   }
 
-  .carousel_btn svg {
-    width: 2.25rem;
-    height: 2.25rem;
+  .carousel_nav_prev {
+    left: -3rem;
+  }
+
+  .carousel_nav_next {
+    right: -3rem;
+  }
+
+  .carousel_nav {
+    top: 35%;
+    transform: translateY(-35%);
   }
 }
+
 @media screen and (min-width: 700px) {
   .btn_container {
     justify-content: center;
@@ -314,15 +339,6 @@
   .cards_list_container {
     gap: 2rem;
   }
-
-  .card_slide {
-    flex: 1;
-    max-width: 50rem;
-  }
-
-  .carousel_controls {
-    margin-top: 3rem;
-  }
 }
 
 @media screen and (min-width: 1010px) {
@@ -333,6 +349,15 @@
     font-size: 2rem;
   }
 
+  .carousel_btn {
+    width: 3.3rem;
+    height: 3.3rem;
+  }
+  .carousel_btn svg {
+    width: 2.3rem;
+    height: 2.3rem;
+  }
+
   .subtitle {
     width: 100%;
     font-size: 2rem;
@@ -340,5 +365,10 @@
 
   .description {
     font-size: 1.8rem;
+  }
+
+  .card_slide {
+    flex: 1;
+    max-width: 50rem;
   }
 }
