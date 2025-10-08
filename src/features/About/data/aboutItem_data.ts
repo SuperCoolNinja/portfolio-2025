@@ -3,7 +3,7 @@ import type { IAboutItems } from "../../../interfaces/IAboutItems";
 export const aboutItemsData: IAboutItems[] = [
   {
     subtitle: "My Main Stacks",
-    labels: ["Typescript", "NodeJS", "ReactJS", "MongoDB"],
+    labels: ["Javascript", "Typescript", "ReactJS", "NodeJS"],
   },
   {
     subtitle: "What I do ?",
@@ -12,7 +12,7 @@ export const aboutItemsData: IAboutItems[] = [
 ];
 
 export const AboutMeSentances: string[] = [
-  "Fullstack web developer with a focus on frontend.",
-  "I build modern, responsive websites and also enjoy modding and game development.",
-  "Looking for a junior frontend role where I can grow in React/TypeScript.",
+  "Frontend-focused web developer with a strong interest in game development and UI/UX design.",
+  "I build responsive websites while enhancing my UI/UX skills with Figma.",
+  "Seeking a React/TypeScript role to develop my skills and contribute to impactful projects.",
 ];

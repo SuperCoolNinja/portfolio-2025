@@ -157,8 +157,9 @@
 
 @media screen and (max-width: 550px) {
   .content {
-    line-height: 2.5rem;
+    line-height: 2.8rem;
     font-size: 1.8rem;
+    width: 35rem;
   }
 }
 
