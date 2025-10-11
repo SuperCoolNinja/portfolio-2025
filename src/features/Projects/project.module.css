@@ -303,7 +303,7 @@
 /* RESPONSIVE */
 @media screen and (max-width: 1110px) {
   .card_container {
-    max-width: 80vw;
+    max-width: 90vw;
   }
 
   .card_slide {
@@ -322,6 +322,18 @@
   .carousel_nav {
     top: 35%;
     transform: translateY(-35%);
+  }
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 800px) {
+  .carousel_nav {
+    display: none;
+  }
+
+  .carousel_wrapper {
+    touch-action: pan-y;
+    user-select: none;
   }
 }
 
