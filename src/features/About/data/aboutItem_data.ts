@@ -12,7 +12,7 @@ export const aboutItemsData: IAboutItems[] = [
 ];
 
 export const AboutMeSentances: string[] = [
-  "Frontend-focused web developer with a strong interest in game development and UI/UX design.",
-  "I build responsive websites while enhancing my UI/UX skills with Figma.",
+  "Frontend-focused web developer with a strong interest in game development and UX/UI Design.",
+  "I build responsive websites while enhancing my UI design skills with Figma.",
   "Seeking a React/TypeScript role to develop my skills and contribute to impactful projects.",
 ];
