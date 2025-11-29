@@ -50,6 +50,21 @@ export const projects: IProjectsData[] = [
 
   {
     id: generateUniqueId(),
+    name: "Connect Four",
+    description:
+      "Console-based Connect 4 with an AI opponent, built in C to practice game programming.",
+    tag: "Game Dev",
+    year: "2025",
+    stacks: ["C"],
+    image:
+      "https://private-user-images.githubusercontent.com/28671231/517767383-cee3295f-9712-45a8-bf00-2040a885e357.gif?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NjQ0NTA3MDAsIm5iZiI6MTc2NDQ1MDQwMCwicGF0aCI6Ii8yODY3MTIzMS81MTc3NjczODMtY2VlMzI5NWYtOTcxMi00NWE4LWJmMDAtMjA0MGE4ODVlMzU3LmdpZj9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTExMjklMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUxMTI5VDIxMDY0MFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWZhMzc5ODdhOWE4MjUwMDhlZTcyMmRmOTU3MWYxODA2ODRlNWViYmU2NjQ0NGE3YzM4MTJmMzg4YzhkYjVjYWImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.RaSblLGF5u2Z-qPCqu0QRun9k1lgtNWrQ0X1-PWfBF8",
+    category: "game development",
+    source_code: "https://github.com/SuperCoolNinja/connect_four",
+    ...Colors["GAMEDEV"],
+  },
+
+  {
+    id: generateUniqueId(),
     name: "Pong Game",
     description: "a Pong Game made to learn and practise basic 2D Math Logic.",
     tag: "Game Dev",
