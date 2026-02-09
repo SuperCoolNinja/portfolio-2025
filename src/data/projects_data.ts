@@ -57,7 +57,7 @@ export const projects: IProjectsData[] = [
     year: "2025",
     stacks: ["C"],
     image:
-      "https://private-user-images.githubusercontent.com/28671231/517767383-cee3295f-9712-45a8-bf00-2040a885e357.gif?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NjQ0NTA3MDAsIm5iZiI6MTc2NDQ1MDQwMCwicGF0aCI6Ii8yODY3MTIzMS81MTc3NjczODMtY2VlMzI5NWYtOTcxMi00NWE4LWJmMDAtMjA0MGE4ODVlMzU3LmdpZj9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTExMjklMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUxMTI5VDIxMDY0MFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWZhMzc5ODdhOWE4MjUwMDhlZTcyMmRmOTU3MWYxODA2ODRlNWViYmU2NjQ0NGE3YzM4MTJmMzg4YzhkYjVjYWImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.RaSblLGF5u2Z-qPCqu0QRun9k1lgtNWrQ0X1-PWfBF8",
+      "https://cdn.discordapp.com/attachments/554479498721099787/1470516642118238268/image.png?ex=698b94d8&is=698a4358&hm=94a29163b448894fe4edffbd062522d1318f414aef663f112bdf1b953fbe705f&",
     category: "game development",
     source_code: "https://github.com/SuperCoolNinja/connect_four",
     ...Colors["GAMEDEV"],

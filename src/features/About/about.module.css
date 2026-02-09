@@ -8,7 +8,7 @@
 
 .profil_picture {
   max-width: 100%;
-  width: 150px;
+  width: 200px;
   height: auto;
   display: block;
   border-radius: 100%;
@@ -22,8 +22,10 @@
 @keyframes img_blob {
   0% {
     transform: scale(0.3);
-    box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.1),
-      inset -1px -1px 1px rgba(0, 0, 0, 0.2), 0 4px 15px rgba(255, 255, 255, 1);
+    box-shadow:
+      inset 1px 1px 1px rgba(0, 0, 0, 0.1),
+      inset -1px -1px 1px rgba(0, 0, 0, 0.2),
+      0 4px 15px rgba(255, 255, 255, 1);
   }
   50% {
     transform: scale(1.1);
@@ -71,16 +73,20 @@
   );
   border-color: color-mix(in oklab, #fff 8%, transparent);
   border-radius: 10rem;
-  box-shadow: inset 1px 1px 2px rgba(255, 255, 255, 0.1),
-    inset -1px -1px 2px rgba(0, 0, 0, 0.2), 0 4px 15px rgba(0, 0, 0, 0.1);
+  box-shadow:
+    inset 1px 1px 2px rgba(255, 255, 255, 0.1),
+    inset -1px -1px 2px rgba(0, 0, 0, 0.2),
+    0 4px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.2s;
 }
 
 .look_job_container:hover {
   cursor: default;
   transform: scale(1.05);
-  box-shadow: inset 1px 1px 2px rgba(255, 255, 255, 0.5),
-    inset -1px -1px 2px rgba(0, 0, 0, 0.2), 0 4px 15px rgba(255, 255, 255, 0.5);
+  box-shadow:
+    inset 1px 1px 2px rgba(255, 255, 255, 0.5),
+    inset -1px -1px 2px rgba(0, 0, 0, 0.2),
+    0 4px 15px rgba(255, 255, 255, 0.5);
   transition: all 0.2s;
 }
 

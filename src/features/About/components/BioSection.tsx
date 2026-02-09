@@ -4,7 +4,7 @@ import LazyImage from "../../../components/LazyImage/LazyImage";
 import Socials from "../../Socials/Socials";
 import Bio from "./Bio";
 import profileThumb from "../../../assets/profil-thumb.jpg";
-import profileFull from "../../../assets/profil.jpg";
+import profileFull from "../../../assets/profil.png";
 import OpenToWork from "./OpenToWork";
 
 const BioSection: React.FunctionComponent = () => {
